@@ -1,8 +1,218 @@
 ﻿.bg__top {    
+    position: relative;
     width: 100%;
-    height: 110vh;
+    height: 105vh;
     background-image: url("./assets/images/bg-top.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -80px;
+}
+.bg__top {
+    div {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #ffffff;
+
+        &:first-child {
+            animation: snow1 15s ease-in infinite;
+        }
+
+        &:nth-child(2) {
+            animation: snow2 19s ease-in infinite;
+        }
+
+        &:nth-child(3) {
+            animation: snow3 15s ease-in infinite;
+        }
+
+        &:nth-child(4) {
+            animation: snow4 16s ease-in infinite;
+        }
+
+        &:nth-child(5) {
+            animation: snow5 18s ease-in infinite;
+        }
+
+        &:nth-child(6) {
+            animation: snow6 20s ease-in infinite;
+        }
+
+        &:last-child {
+            animation: snow7 15s ease-in infinite;
+        }
+    }
+}
+@-webkit-keyframes snow1 {
+    from {
+        bottom: 0;
+        left: 200px;
+    }
+    to {
+        bottom: 100%;
+        left: 10px;
+    }
+}
+@-webkit-keyframes snow2 {
+    0% {
+        bottom: 0;
+        left: 10%;
+    }
+
+    20% {
+        bottom: 20%;
+        left: 30%;
+    }
+
+    40% {
+        bottom: 40%;
+        left: 24%;
+    }
+
+    60% {
+        bottom: 55%;
+        left: 35%;
+    }
+
+    80% {
+        bottom: 70%;
+        left: 25%;
+    }
+    100% {
+        bottom: 100%;
+        left: 30%;
+    }
+}
+@-webkit-keyframes snow3 {
+    0% {
+        bottom: 0;
+        left: 90%;
+    }
+
+    20% {
+        bottom: 20%;
+        left: 80%;
+    }
+
+    40% {
+        bottom: 40%;
+        left: 95%;
+    }
+
+    80% {
+        bottom: 80%;
+        left: 50%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 55%;
+    }
+}
+@-webkit-keyframes snow4 {
+    0% {
+        bottom: 0;
+        left: 50%;
+    }
+
+    10% {
+        bottom: 20%;
+        left: 53%;
+    }
+
+    30% {
+        bottom: 40%;
+        left: 33%;
+    }
+
+    40% {
+        bottom: 55%;
+        left: 60%;
+    }
+
+    70% {
+        bottom: 70%;
+        left: 20%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 90%;
+    }
+}
+@-webkit-keyframes snow5{
+    0% {
+        bottom: 0;
+        left: 70%;
+    }
+
+    20% {
+        bottom: 20%;
+        left: 65%;
+
+    }
+
+    40% {
+        bottom: 40%;
+        left: 68%;
+    }
+
+    60% {
+        bottom: 55%;
+        left: 50%;
+    }
+
+    80% {
+        bottom: 70%;
+        left: 55%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 50%;
+    }
+}
+@-webkit-keyframes snow6 {
+    0% {
+        bottom: 0;
+        left: 33%;
+    }
+
+    20% {
+        bottom: 20%;
+        left: 50%;
+    }
+
+    60% {
+        bottom: 55%;
+        left: 20%;
+    }
+
+    100% {
+        bottom: 100%;
+        left: 70%;
+    }
+}
+@-webkit-keyframes snow7 {
+    0% {
+        bottom: 0;
+        left: 60%;
+    }
+    25% {
+        bottom: 25%;
+        left: 80%;
+    }
+    50% {
+        bottom: 50%;
+        left: 70%;
+    }
+    75% {
+        bottom: 75%;
+        left: 65%;
+    }
+    100% {
+        bottom: 100%;
+        left: 85%;
+    }
 }

@@ -120,7 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WeddingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +194,8 @@
     <Content Include="Content\assets\images\trang-tri\trangtriloidi.jpg" />
     <Content Include="Content\assets\images\trang-tri\trangtrinhahang.jpg" />
     <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\scripts\dropdownHeader.js" />
+    <Content Include="Content\scripts\social.js" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style.min.css" />
     <Content Include="favicon.ico" />
@@ -216,6 +222,14 @@
     <Content Include="Content\scss\_module.scss" />
     <Content Include="Content\scss\_var.scss" />
     <Content Include="Content\style.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Content\assets\jquery\jquery-3.3.1.intellisense.js" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.js" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.min.js" />
@@ -239,13 +253,32 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Wedding\Hall.cshtml" />
+    <Content Include="Views\Wedding\Food.cshtml" />
+    <Content Include="Views\Wedding\Service.cshtml" />
+    <Content Include="Views\Wedding\Picture.cshtml" />
+    <Content Include="Views\Wedding\Book.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\scripts\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\scss\module\_social.scss" />
+    <Content Include="Content\scss\module\_about.scss" />
+    <Content Include="Content\scss\module\_contact.scss" />
+    <Content Include="Content\scss\module\_picture.scss" />
+    <Content Include="Content\scss\module\_hall.scss" />
+    <Content Include="Content\scss\module\_pagination.scss" />
+    <Content Include="Content\scss\module\_service.scss" />
+    <Content Include="Content\scss\module\_food.scss" />
+    <Content Include="Content\scss\module\_bookParty.scss" />
+    <Content Include="Content\scss\module\_login.scss" />
+    <Content Include="Content\scss\module\_register.scss" />
     <None Include="packages.config" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.slim.min.map" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.min.map" />

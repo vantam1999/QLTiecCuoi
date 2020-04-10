@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/assets/images/logo1.png" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,28 +28,49 @@
                         <a href="/">TRANG CHỦ</a>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">GIỚI THIỆU</a>
+                        <a href="/Home/About">GIỚI THIỆU</a>
                     </li>
                     <li class="header__nav--item header__nav--tiecCuoi">
-                        <a href="javascript:void(0)">TIỆC CƯỚI</a>
+                        <a id="link__tiecCuoi" href="javascript:void(0)">
+                            TIỆC CƯỚI
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <div class="header__dropdown dropdown">
+                            <ol class="dropdown__menu" id="dropdown__menu--topbar">
+                                <li class="dropdown__item">
+                                    <a href="/Wedding/Hall">SẢNH TIỆC</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="/Wedding/Food">THỰC ĐƠN</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="/Wedding/Service">DỊCH VỤ</a>
+                                </li>
+                            </ol>
+                        </div>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">HÌNH ẢNH</a>
+                        <a href="/Wedding/Picture">HÌNH ẢNH</a>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">ĐẶT TIỆC</a>
+                        <a href="/Wedding/Book">ĐẶT TIỆC</a>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">TRA CỨU</a>
+                        <a href="/Home/Contact">LIÊN HỆ</a>
+                    </li>
+                    <li class="header__nav--item header__nav--bill">
+                        <a href="/">HÓA ĐƠN</a>
+                    </li>
+                    <li class="header__nav--item header__nav--user">
+                        <a href="/">
+                            <i class="fa fa-user"></i>
+                        </a>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">LIÊN HỆ</a>
+                        <a href="/">ĐĂNG KÝ</a>
                     </li>
                     <li class="header__nav--item">
-                        <a href="/">SIGN UP</a>
-                    </li>
-                    <li class="header__nav--item">
-                        <a href="/">SIGN IN</a>
+                        <a href="/">ĐĂNG NHẬP</a>
                     </li>
                 </ol>
             </nav>
@@ -56,7 +78,13 @@
     </header>
     <!-- ==== Background top ==== -->
     <div class="bg__top">
-
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
     <!-- ==== Body ==== -->
     <div class="body">
@@ -70,7 +98,31 @@
     <footer></footer>
     <!-- ==== Social ==== -->
     <div class="social">
-
+        <button id="btn__social">
+            <i class="fa fa-times" id="social__times"></i>
+        </button>
+        <ol class="social__home">
+            <li class="social__item">
+                <a class="social__link" href="#">
+                    <i class="fa fa-facebook social__link--fb"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a class="social__link" href="#">
+                    <i class="fa fa-instagram social__link--instagram"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a class="social__link" href="#">
+                    <i class="fa fa-twitter social__link--twitter"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a class="social__link" href="#">
+                    <i class="fa fa-youtube social__link--youtube"></i>
+                </a>
+            </li>
+        </ol>
     </div>
     <!-- ==================== -->
     <!-- ==================== -->
@@ -86,5 +138,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     @RenderSection("scripts", required: false)
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/scripts")
+    @*<script src="~/Content/scripts/dropdownHeader.js"></script>
+    <script src="~/Content/scripts/social.js"></script>*@
 </body>
 </html>

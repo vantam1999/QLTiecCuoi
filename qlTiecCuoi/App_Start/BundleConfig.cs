@@ -19,6 +19,10 @@ namespace qlTiecCuoi
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Content/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+                        "~/Content/scripts/dropdownHeader.js",
+                        "~/Content/scripts/social.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(               
                       "~/Content/site.css"));
         }

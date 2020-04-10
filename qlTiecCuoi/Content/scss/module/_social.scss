@@ -1,0 +1,71 @@
+﻿.social__home {
+    & .active {
+        transition: .4s;
+    }
+}
+.social button {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #30c130;
+    outline: none;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: .4s;
+    z-index: 5;
+
+    &:hover {
+        transform: rotate(720deg);
+        transition: .4s;
+    }
+
+    i {
+        font-size: 24px;
+        color: #30c130;
+    }
+}
+.social__item {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #30c130;
+    background-color: #ffffff;
+    transition: .4s;
+
+    &:hover {
+        background-color: #7fffd4;
+    }
+}
+.social__link {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    i {
+        font-size: 22px;
+    }
+
+    &--fb {
+        color: #00f;
+    }
+
+    &--instagram {
+        color: #800080;
+    }
+
+    &--tiwtter {
+        color: #007bff;
+    }
+
+    &--youtube {
+        color: $colorRed;
+    }
+}

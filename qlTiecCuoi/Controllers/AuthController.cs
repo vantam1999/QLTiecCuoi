@@ -6,17 +6,15 @@ using System.Web.Mvc;
 
 namespace qlTiecCuoi.Controllers
 {
-    public class HomeController : Controller
+    public class AuthController : Controller
     {
-        public ActionResult Index()
+        // GET: Auth
+        public ActionResult Login()
         {
             return View();
         }
-        public ActionResult About()
-        {
-            return View();
-        }
-        public ActionResult Contact()
+        
+        public ActionResult Register()
         {
             return View();
         }
