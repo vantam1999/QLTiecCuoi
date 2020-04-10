@@ -4,16 +4,87 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/style.min.css")
 </head>
 <body>
-    
+    <!-- ==== Header ==== -->
+    <header class="header topbar">
+        <div class="container">
+            <nav>
+                <ol class="header__nav">
+                    <li class="header__nav--item header__nav--brand">
+                        <a href="/">
+                            <img src="~/Content/assets/images/logo1.png" title="" alt="" />
+                        </a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">TRANG CHỦ</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">GIỚI THIỆU</a>
+                    </li>
+                    <li class="header__nav--item header__nav--tiecCuoi">
+                        <a href="javascript:void(0)">TIỆC CƯỚI</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">HÌNH ẢNH</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">ĐẶT TIỆC</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">TRA CỨU</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">LIÊN HỆ</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">SIGN UP</a>
+                    </li>
+                    <li class="header__nav--item">
+                        <a href="/">SIGN IN</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <!-- ==== Background top ==== -->
+    <div class="bg__top">
+
+    </div>
+    <!-- ==== Body ==== -->
+    <div class="body">
         @RenderBody()
-        
+    </div>
+    <!-- ==== Partner ==== -->
+    <div class="partner">
+
+    </div>
+    <!-- ==== Footer ==== -->
+    <footer></footer>
+    <!-- ==== Social ==== -->
+    <div class="social">
+
+    </div>
+    <!-- ==================== -->
+    <!-- ==================== -->
+
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/modernizr")
 </body>
 </html>

@@ -1,0 +1,33 @@
+﻿.header__nav--brand {
+    margin-right: 70px;
+    img {
+        width: 60px;
+        object-fit: cover;
+    }
+}
+.header__nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & a {
+        color: $colorDarkBlue;
+        font-weight: bold;
+        padding: 10px;
+    }
+}
+.header__nav > *:not(.header__nav--brand) {
+    
+}
+.header__nav--item {
+    position: relative;    
+}
+.header__nav--tiecCuoi {    
+    /*&::after {
+        content: "\";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 20px;
+    }*/
+}
