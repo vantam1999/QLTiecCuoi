@@ -21,7 +21,9 @@ namespace qlTiecCuoi
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                         "~/Content/scripts/dropdownHeader.js",
-                        "~/Content/scripts/social.js"));
+                        "~/Content/scripts/social.js",
+                        "~/Content/scripts/partnerCarousel.js",
+                        "~/Content/scripts/animateScroll.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(               
                       "~/Content/site.css"));

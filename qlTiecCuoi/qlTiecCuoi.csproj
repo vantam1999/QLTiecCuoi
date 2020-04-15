@@ -172,6 +172,11 @@
     <Content Include="Content\assets\images\ocean-wedding\img-8.png" />
     <Content Include="Content\assets\images\ocean-wedding\img-9.png" />
     <Content Include="Content\assets\images\partner\partner-1.png" />
+    <Content Include="Content\assets\images\partner\partner-10.png" />
+    <Content Include="Content\assets\images\partner\partner-11.png" />
+    <Content Include="Content\assets\images\partner\partner-12.png" />
+    <Content Include="Content\assets\images\partner\partner-13.png" />
+    <Content Include="Content\assets\images\partner\partner-14.png" />
     <Content Include="Content\assets\images\partner\partner-2.png" />
     <Content Include="Content\assets\images\partner\partner-3.png" />
     <Content Include="Content\assets\images\sanh\amethyst-1.jpg" />
@@ -194,7 +199,9 @@
     <Content Include="Content\assets\images\trang-tri\trangtriloidi.jpg" />
     <Content Include="Content\assets\images\trang-tri\trangtrinhahang.jpg" />
     <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\scripts\animateScroll.js" />
     <Content Include="Content\scripts\dropdownHeader.js" />
+    <Content Include="Content\scripts\partnerCarousel.js" />
     <Content Include="Content\scripts\social.js" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style.min.css" />
@@ -279,6 +286,7 @@
     <Content Include="Content\scss\module\_bookParty.scss" />
     <Content Include="Content\scss\module\_login.scss" />
     <Content Include="Content\scss\module\_register.scss" />
+    <Content Include="Content\scss\module\_partner.scss" />
     <None Include="packages.config" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.slim.min.map" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.min.map" />

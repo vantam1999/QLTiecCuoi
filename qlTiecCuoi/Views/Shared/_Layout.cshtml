@@ -92,7 +92,49 @@
     </div>
     <!-- ==== Partner ==== -->
     <div class="partner">
-
+        <div class="partner__home">
+            <div class="owl-carousel owl-theme owl-loaded partner__carousel">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-1.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-2.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-3.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-10.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-12.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-13.png" title="" alt="" />
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <img src="~/Content/assets/images/partner/partner-14.png" title="" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- ==== Footer ==== -->
     <footer></footer>
@@ -124,10 +166,10 @@
             </li>
         </ol>
     </div>
-    <!-- ==================== -->
-    <!-- ==================== -->
 
 
+    <!-- ==================== -->
+    <!-- ==================== -->
     @Scripts.Render("~/bundles/jquery")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -136,10 +178,11 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)   
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/scripts")
     @*<script src="~/Content/scripts/dropdownHeader.js"></script>
-    <script src="~/Content/scripts/social.js"></script>*@
+        <script src="~/Content/scripts/social.js"></script>*@
+
 </body>
 </html>
