@@ -6,6 +6,10 @@ body {
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
+/*body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}*/
 a,
 a:hover {
   text-decoration: none; }
@@ -16,11 +20,22 @@ ul {
   list-style: none; }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 60px;
+  background-color: transparent;
   z-index: 999; }
+
+.header.active {
+  position: fixed;
+  background-color: #fff;
+  border-bottom: 1px solid #000000; }
+
+footer {
+  position: relative;
+  margin-top: 60px; }
 
 .header__nav--brand {
   margin-right: 100px; }
@@ -112,25 +127,25 @@ ul {
   background-size: cover;
   background-position-y: -80px; }
 
-.bg__top div {
+.bg__top > div {
   position: absolute;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background-color: #ffffff; }
-  .bg__top div:first-child {
+  .bg__top > div:first-child {
     animation: snow1 15s ease-in infinite; }
-  .bg__top div:nth-child(2) {
+  .bg__top > div:nth-child(2) {
     animation: snow2 19s ease-in infinite; }
-  .bg__top div:nth-child(3) {
+  .bg__top > div:nth-child(3) {
     animation: snow3 15s ease-in infinite; }
-  .bg__top div:nth-child(4) {
+  .bg__top > div:nth-child(4) {
     animation: snow4 16s ease-in infinite; }
-  .bg__top div:nth-child(5) {
+  .bg__top > div:nth-child(5) {
     animation: snow5 18s ease-in infinite; }
-  .bg__top div:nth-child(6) {
+  .bg__top > div:nth-child(6) {
     animation: snow6 20s ease-in infinite; }
-  .bg__top div:last-child {
+  .bg__top > div:last-child {
     animation: snow7 15s ease-in infinite; }
 
 @-webkit-keyframes snow1 {

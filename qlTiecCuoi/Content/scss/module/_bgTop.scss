@@ -1,14 +1,14 @@
-﻿.bg__top {    
-    position: relative;
+﻿.bg__top {               
+    position: relative;   
     width: 100%;
-    height: 105vh;
+    height: 105vh;  
     background-image: url("./assets/images/bg-top.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -80px;
 }
 .bg__top {
-    div {
+    & > div {
         position: absolute;
         width: 7px;
         height: 7px;
