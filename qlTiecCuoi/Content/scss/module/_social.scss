@@ -16,7 +16,7 @@
     cursor: pointer;
     transform: rotate(0);
     transition: .4s;
-    z-index: 5;
+    z-index: 888;
 
     &:hover {
         transform: rotate(720deg);
@@ -38,6 +38,7 @@
     border: 1px solid #30c130;
     background-color: #ffffff;
     transition: .4s;
+    z-index: 777;
 
     &:hover {
         background-color: #7fffd4;

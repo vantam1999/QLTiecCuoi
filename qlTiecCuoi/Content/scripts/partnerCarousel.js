@@ -1,5 +1,5 @@
-﻿// ==== carousel ==== //
-$(document).ready(() => {
+﻿$(document).ready(() => {
+    // ==== carousel partner ==== //
     $('.partner__carousel').owlCarousel({
         loop: true,
         margin: 10,      
@@ -18,4 +18,12 @@ $(document).ready(() => {
             }
         }
     });
+    // ==== carousel homepage section giới thiệu ==== //
+    $('.section__about--carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        items: 1
+    });
 });
+
+

@@ -1,4 +1,145 @@
 ﻿footer {
     position: relative;
     margin-top: 60px;
+    padding: 30px 0;
+    background-image: url("./assets/images/footer/footer.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("./assets/images/footer/footer1.png") repeat center center;        
+        background-color: rgba(0,0,0,0.4);
+    }
+}
+.footer {
+    &__name {
+        letter-spacing: 2px;
+        a {
+            font-size: 22px;
+        }
+    }
+
+    &__social {
+        position: relative;
+        padding: 15px 0;
+        margin: 15px 0;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 1px;
+            background: rgba(255,255,255,0.3)
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        & i {
+            font-size: 24px;
+
+            &:hover {
+                color: aqua;
+            }
+        }
+
+        & span {
+            margin: 0 8px;
+        }
+    }
+
+    &__address {
+        color: #fff;
+    }
+
+    &__mail {
+        margin: 15px 0;
+    }
+}
+.footer__home {
+    position: relative;
+    z-index: 3;
+}
+.footer__box {    
+    & > div {
+        text-align: center;
+    }
+    & a {
+        color: #ffffff;
+    }
+}
+.footer__box div img {
+    width: 100px;
+    object-fit: cover;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__content--contact {
+    width: 400px;
+    background-color: #64463C;
+    padding: 30px;
+}
+.footer__content--logo {
+    width: 600px;
+
+    .cross__horizontal--small {
+        display: block;
+        @include crossHorizontal(400px, 2px, #888080);
+        opacity: .3;
+        margin: 30px auto 40px auto;
+    }
+
+    & > div:first-child {
+        text-align: center;
+
+        & img {
+            width: 180px;
+        }
+    }
+
+    & > div:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & img {
+            width: 130px;
+        }
+
+        & a {
+            opacity: 0.4;
+            transition: .4s;
+
+            &:hover {
+                opacity: 1;
+                transition: .4s;
+            }
+        }
+    }
+}
+.cross__horizontal--large {
+    @include crossHorizontal(100%, 2px, #888080);
+    opacity: .3;
+    margin: 20px 0;
+}
+.copyright {
+    color: #fff;
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 ﻿.header__nav--brand {
     margin-right: 100px;
     img {
+        margin-bottom: 15px;
         width: 60px;
         height: 55px;
         object-fit: cover;
@@ -39,8 +40,7 @@
 }
 .dropdown__menu {
     width: 250px;
-    background-color: #ffffff;
-    opacity: .8;
+    background-color: #ffffff;   
     overflow: hidden;
     height: 0;
     visibility: hidden;

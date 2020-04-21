@@ -1,0 +1,139 @@
+﻿.homePage__section {
+    //background-color: $colorWhiteCloud;
+    margin: 30px 0;
+}
+.section {
+
+}
+.section__home {
+
+    &--padding {
+        padding: 0 120px;
+    }
+    // ==== section home content ==== //
+    &--content {
+        padding: 30px;
+        text-align: center;
+
+        & h1 {
+            font-size: 33px;
+            font-family: cursive;
+            font-style: italic;
+        }
+
+        & h3 {
+            font-size: 21px;
+            letter-spacing: 2px;
+        }
+    }
+    // ==== section home carousel ==== //
+    &--carousel {
+        .owl-prev {
+            left: 20px;
+        }
+
+        .owl-next {
+            right: 20px;
+        }
+
+        .owl-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+    // ==== section home service ==== //
+    &--service {
+        @include flex(space-between, initial);
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+
+        & .service__item {
+            width: calc(100% / 4 - 15px);
+            border: 2px solid $colorDarkBlue;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+            }
+
+            & h1 {
+                background-color: #ffffff;
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 0;
+                height: 70px;
+            }
+        }
+    }
+    // ==== section home sale ==== //
+    &--sale {
+        position: relative;
+        overflow: hidden;
+
+        & .sale__banner {
+            position: relative;
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    // ==== section home form ==== //
+    &--form {
+        padding: 20px 90px;
+        border: 2px solid $colorDarkBlue;
+
+        form {
+            position: relative;
+        }
+
+        .form__home {
+            @include flex(space-between, initial);
+            flex-wrap: wrap;
+            width: 100%;
+
+            & > .form__group:last-child {
+                width: 100%;
+            }
+
+            #contact-content {
+                max-width: 100%;
+                width: 100%;
+                border: 2px solid $colorDarkBlue;
+                padding: 10px 20px;
+                resize: none;
+            }
+
+            .form__group {
+                margin-bottom: 20px;
+                input {
+                    height: 40px;
+                    border: 2px solid $colorDarkBlue;
+                    box-sizing: border-box;
+                    padding: 0 10px;
+                }
+            }
+        }
+        form button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: $colorDarkBlue;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+.section__home * {
+    color: $colorDarkBlue;
+}
+.section__home--content * {
+    color: $colorDarkBlue;
+}

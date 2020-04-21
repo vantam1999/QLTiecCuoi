@@ -1,5 +1,5 @@
 ﻿.partner {
-    border-top: 1px solid #000000;
+    border-top: 1px solid $colorDarkBlue;
     &__home {
         padding: 5px 25px 20px 25px;
     }
@@ -16,6 +16,7 @@
     width: 40px;
     height: 40px;
     outline: none;
+    z-index: 5;
 
     &::after {       
         position: absolute;
