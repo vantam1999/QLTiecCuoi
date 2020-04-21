@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using System.Web.UI.WebControls;
 
 namespace qlTiecCuoi
 {
@@ -13,7 +14,7 @@ namespace qlTiecCuoi
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Content/assets/jquery/jquery.validate*"));
-
+            
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
