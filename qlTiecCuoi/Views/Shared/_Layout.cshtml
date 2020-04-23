@@ -76,15 +76,7 @@
         </div>
     </header>
     <!-- ==== Background top ==== -->
-    <div class="bg__top" id="back-top">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    @RenderSection("bgTop", required: false)
     <!-- ==== Body ==== -->
     <div class="body">
         @RenderBody()
@@ -173,7 +165,7 @@
                                         </a>
                                     </span>
                                 </div>
-                                <div class="footer__address">XXX, Quận 13, TP. Hồ Chí Minh</div>                                                          
+                                <div class="footer__address">XXX, Quận 13, TP. Hồ Chí Minh</div>
                                 <div class="footer__mail">
                                     <a href="mailto:tvantam1475369@gmail.com">anonymouspalace@gmail.com</a>
                                 </div>
@@ -256,11 +248,11 @@
     @Scripts.Render("~/bundles/jquery")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>    
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    @RenderSection("scripts", required: false)   
+    @RenderSection("scripts", required: false)
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/scripts")
-          
+
 </body>
 </html>
