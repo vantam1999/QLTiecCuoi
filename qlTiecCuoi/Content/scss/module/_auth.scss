@@ -1,0 +1,86 @@
+﻿// ==== auth register-login chung ==== //
+.auth__bg {
+    width: 100%;   
+    margin-top: 60px;
+    background: url("./assets/images/register-bg.jpg") no-repeat center center; 
+    background-size: cover;
+}
+
+.auth__home {
+    @include flex(center, center);
+    padding: 60px 0;
+    h1 {
+        text-align: center;
+        letter-spacing: 4px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+}
+
+.auth__box {
+    display: flex;
+    width: 900px;
+
+    &--left,
+    &--right {
+        position: relative;
+        width: calc(100% / 2);       
+    }
+    // ==== auth box left ==== //
+    &--left {
+    }
+
+    .box__image {
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    // ==== auth box right ==== //
+    &--right {
+        padding: 20px 40px;
+        background-color: #202123;
+
+        input {
+            position: relative;
+            padding: 10px 20px;
+            max-width: 100%;
+            width: 100%;
+            color: #ffffff;
+            background: none;
+            border: none;
+            outline: none;  
+            border-bottom: 5px solid #ffffff;
+            font-size: 18px;
+
+            &::placeholder {
+                color: #c5c2c2;
+            }
+        }
+    }
+}
+
+.auth__confirmed {
+    letter-spacing: 2px;
+    margin: 20px 0;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    background-color: #5f5fec;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+// ==== Register ==== //
+.register__confirmed {
+    background-color: #21bf43;
+}
+
+
+// ==== Login ==== //
+.login__confirmed {
+    background-color: #5f5fec;
+}

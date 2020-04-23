@@ -112,48 +112,48 @@
             <div class="section__home--form">
                 @using (Html.BeginForm("Contact"))
                 {
-                <div class="form__home">
-                    <div class="form__group">
-                        <div>
-                            <label>Họ Tên</label>
+                    <div class="form__home">
+                        <div class="form__group">
+                            <div>
+                                <label>Họ Tên</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
                         </div>
-                        <div>
-                            <input type="text" />
+                        <div class="form__group">
+                            <div>
+                                <label>Email</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label>Số Điện Thoại</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label>Ngày Đặt Tiệc</label>
+                            </div>
+                            <div>
+                                <input type="date" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label></label>
+                            </div>
+                            <div>
+                                <textarea spellcheck="false" rows="5" id="contact-content"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="form__group">
-                        <div>
-                            <label>Email</label>
-                        </div>
-                        <div>
-                            <input type="text" />
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <div>
-                            <label>Số Điện Thoại</label>
-                        </div>
-                        <div>
-                            <input type="text" />
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <div>
-                            <label>Ngày Đặt Tiệc</label>
-                        </div>
-                        <div>
-                            <input type="date" />
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <div>
-                            <label>Nội Dung</label>
-                        </div>
-                        <div>
-                            <textarea spellcheck="false" rows="5" id="contact-content"></textarea>                            
-                        </div>
-                    </div>
-                </div>
                     <button type="submit">GỬI</button>
                 }
             </div>

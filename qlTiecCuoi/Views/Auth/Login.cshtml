@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="auth__bg login">
+        <div class="auth__home login__home">
+            <form action="/Auth/Login" method="post">
+                <h1>LOGIN FORM</h1>
+                <div class="auth__box">
+                    <div class="auth__box--left">
+                        <div class="box__image">
+                            <img src="~/Content/assets/images/register-content.jpg" />
+                        </div>
+                        <div class="box__content"></div>
+                    </div>
+                    <div class="auth__box--right">
+                        <div class="form-group">
+                            <input type="text" id="Email" name="Email" placeholder="mail@example.com" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="Password" name="Password" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Error -->
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="auth__confirmed login__confirmed">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+

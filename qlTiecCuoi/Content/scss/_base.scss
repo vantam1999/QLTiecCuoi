@@ -20,6 +20,9 @@ ul {
     margin-bottom: 0;
     list-style: none;
 }
+select, input {
+    max-width: 100%;
+}
 @mixin crossHorizontal($width, $height, $backgroundColor) {
     width: $width;
     height: $height;

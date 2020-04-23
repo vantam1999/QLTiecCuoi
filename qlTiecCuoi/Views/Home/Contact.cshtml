@@ -4,5 +4,65 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Đây là trang liên hệ</h2>
+<!-- ==== Nhận báo giá ==== -->
+<section class="homePage__section section homePage__section--Contact">
+    <div class="container">
+        <div classs="section__home section__home--padding">
+            <div class="section__home--content">
+                <h1>Tư Vấn Đặt Tiệc</h1>
+                <h5>Các bạn đã sẵn sàng cho một hành trình đi xa hơn cùng nhau chưa?</h5>
+                <h5>Gia đình có chuẩn bị sẵn sàng cho một buổi tiệc ấm áp chưa?</h5>
+                <h5>Hãy để lại thông tin bên dưới để nhận tư vấn đặt tiệc từ Aqua Palace nhé!</h5>
+            </div>
+            <div class="section__home--form">
+                @using (Html.BeginForm("Contact"))
+                {
+                    <div class="form__home">
+                        <div class="form__group">
+                            <div>
+                                <label>Họ Tên</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label>Email</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label>Số Điện Thoại</label>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label>Ngày Đặt Tiệc</label>
+                            </div>
+                            <div>
+                                <input type="date" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div>
+                                <label></label>
+                            </div>
+                            <div>
+                                <textarea spellcheck="false" rows="5" id="contact-content"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">GỬI</button>
+                }
+            </div>
+        </div>
+    </div>
+</section>
 

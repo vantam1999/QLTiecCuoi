@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="auth__bg register">
+    <div class="auth__home register__home">
+        <form action="/Auth/Register" method="post">
+            <h1>REGISTER FORM</h1>
+            <div class="auth__box">
+                <div class="auth__box--left">
+                    <div class="box__image">
+                        <img src="~/Content/assets/images/register-content.jpg" />
+                    </div>
+                    <div class="box__content"></div>
+                </div>
+                <div class="auth__box--right">
+                    <div class="form-group">
+                        <input type="text" id="FirstName" name="FirstName" placeholder="First Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="LastName" name="LastName" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="Email" name="Email" placeholder="mail@example.com" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="Password" name="Password" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="Confirmpassword" name="Confirmpassword" placeholder="Confirm Password" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="auth__confirmed register__confirmed">Register</button>
+                    </div>
+                </div>
+            </div>            
+        </form>
+    </div>    
+</div>
+

@@ -220,6 +220,7 @@
     <Content Include="Content\assets\bootstrap\bootstrap.css" />
     <Content Include="Content\assets\bootstrap\bootstrap.min.css" />
     <Content Include="Content\scripts\animateScroll.js" />
+    <Content Include="Content\scripts\book.js" />
     <Content Include="Content\scripts\dropdownHeader.js" />
     <Content Include="Content\scripts\partnerCarousel.js" />
     <Content Include="Content\scripts\social.js" />
@@ -385,12 +386,13 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
@@ -413,6 +415,7 @@
     <Content Include="Content\assets\bootstrap\bootstrap-reboot.css.map" />
     <Content Include="Content\assets\bootstrap\bootstrap-grid.min.css.map" />
     <Content Include="Content\assets\bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Content\scss\module\_auth.scss" />
     <None Include="packages.config" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.slim.min.map" />
     <Content Include="Content\assets\jquery\jquery-3.3.1.min.map" />

@@ -6,7 +6,7 @@
         var backTop = document.querySelector('.backTop');
 
         // ==== console log ==== //
-        console.log('scrollTop ' + document.documentElement.scrollTop);        
+        //console.log('scrollTop ' + document.documentElement.scrollTop);        
 
         // ==== scroll topbar ==== //
         function scrollTopbar() {

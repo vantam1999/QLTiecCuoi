@@ -4,5 +4,317 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Đây là đặc tiệc</h2>
+<section class="homePage__section section homePage__section--Contact book">
+    <div class="container">
+        <div classs="section__home book__home">
+            <div class="section__home--content">
+                <h1>Album Đặt Tiệc</h1>   
+                <h3>QUÝ KHÁCH VUI LÒNG BẤM VÀO NÚT ĐẶT TIỆC BÊN DƯỚI!</h3>
+            </div>
+            <div class="book__album">
+                <form>
+                    <div class="album__center">
+                        <!-- ==== Bìa sách ==== -->
+                        <div class="album__left">
+                            <!-- ==== Mặt ngoài ==== -->
+                            <div class="album__left--surface surface" id="surfaceCover">
+                                <div class="infoRestaurant">
+                                    <div>
+                                        <img src="~/Content/assets/images/logo1.png" />
+                                    </div>
+                                    <div class="infoRestaurant__name">ANONYMOUS PALACES</div>
+                                    <div class="cross"></div>
+                                    <div>
+                                        <button type="button" class="openMenu" id="openMenu">ĐẶT TIỆC</button>
+                                    </div>
+                                </div>
+                                <div class="form__name--vc">
+                                    <div class="form-group">
+                                        <label for="TenChuRe">Tên Chú Rể: </label>
+                                        <input type="text" name="TenChuRe" id="TenChuRe" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TenCoDau">Tên Cô Dâu: </label>
+                                        <input type="text" name="TenCoDau" id="TenCoDau" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sdt">Điện Thoại: </label>
+                                        <input type="text" name="sdt" id="sdt" />
+                                    </div>
+                                </div>
+                                <div class="listMenu">
+                                    <ol>
+                                        <li>
+                                            <a href="javascript:void(0)">Thực Đơn</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Dịch Vụ</a>
+                                        </li>
+                                        <li>
+                                            <button type="submit" class="book__confirmed">Xác Nhận Đặt Tiệc</button>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
 
+                            <!-- ==== Mặt trong ==== -->
+                            <div class="album__left--inside inside" id="insideCover">
+                                <img src="~/Content/assets/images/background-9.jpg" />
+                            </div>
+                        </div>
+
+                        <!-- ==== Trang sách ==== -->
+                        <div class="album__right">
+                            <button type="button" class="closeMenu" id="closeMenu">X</button>
+                            <!-- ==== Page 1 ==== -->
+                            <div class="page page1">
+                                <div class="surface">
+                                    <div class="page__content">
+                                        <h1>Chọn Thông Tin Tiệc</h1>
+                                        <div>
+                                            <div class="form-group">
+                                                <select name="halls" class="form-control">
+                                                    <option value="0">Chọn Sảnh</option>
+                                                    <option value="1">Sảnh Diamond</option>
+                                                    <option value="2">Sảnh Pure Diamond</option>
+                                                    <option value="3">Sảnh Ruby</option>
+                                                    <option value="4">Sảnh Sapphire</option>
+                                                    <option value="5">Sảnh Amethyst</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="date" name="ngay" id="ngay" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="ca" class="form-control">
+                                                    <option value="0">Chọn Ca</option>
+                                                    <option value="1">Ca Trưa</option>
+                                                    <option value="2">Ca Tối</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="SLBan">Số lượng bàn:</label>
+                                                <input type="number" name="SLBan" id="SLBan" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="SLBanDuTru">Số lượng bàn dự trữ:</label>
+                                                <input type="number" name="SLBanDuTru" id="SLBanDuTru" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="TienDatCoc">Tiền Đặt Cọc:</label>
+                                                <input type="number" name="TienDatCoc" id="TienDatCoc" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ol class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">3</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="inside">
+                                    <div class="page__content">
+                                        <h1>Thực Đơn</h1>
+                                        <div>
+                                            <ol class="page__listMenu">
+                                                <li>
+                                                    <input type="checkbox" name="1" id="GanNgong" value="Gan Ngỗng" />
+                                                    <label for="GanNgong">
+                                                        <img src="~/Content/assets/images/food/ganngong.jpg" />
+                                                        <div>Gan Ngỗng</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="2" id="BoCauQuay" value="Bồ Câu Quay" />
+                                                    <label for="BoCauQuay">
+                                                        <img src="~/Content/assets/images/food/bocauquay.jpg" />
+                                                        <div>Bồ Câu Quay</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="3" id="BaRoi" value="Ba Rọi Heo Quay" />
+                                                    <label for="BaRoi">
+                                                        <img src="~/Content/assets/images/food/baroiheoquay.jpg" />
+                                                        <div>Ba Rọi Heo Quay</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="4" id="BoXao" value="Bò Xào Tương Ớt" />
+                                                    <label for="BoXao">
+                                                        <img src="~/Content/assets/images/food/boxaotuongot.jpg" />
+                                                        <div>Bò Xào Tương Ớt</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="5" id="Burger" value="Burge Pate" />
+                                                    <label for="Burger">
+                                                        <img src="~/Content/assets/images/food/burge.jpg" />
+                                                        <div>Burger Pate</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="6" id="CaHoiTamBot" value="Cá Hồi Tẩm Bột" />
+                                                    <label for="CaHoiTamBot">
+                                                        <img src="~/Content/assets/images/food/cahoitambot.jpg" />
+                                                        <div>Cá Hồi Tẩm Bột</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="7" id="CanhGaNuong" value="Cánh Gà Nướng" />
+                                                    <label for="CanhGaNuong">
+                                                        <img src="~/Content/assets/images/food/canhganuong.jpg" />
+                                                        <div>Cánh Gà Nướng</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="8" id="CuSenBanhHoa" value="Củ Sen Bánh Hoa" />
+                                                    <label for="CuSenBanhHoa">
+                                                        <img src="~/Content/assets/images/food/cusenbanhhoa.jpg" />
+                                                        <div>Củ Sen Bánh Hoa</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="9" id="LauBoCuonNam" value="Lẩu Bò Cuộn Nấm" />
+                                                    <label for="LauBoCuonNam">
+                                                        <img src="~/Content/assets/images/food/laubocuonnam.jpg" />
+                                                        <div>Lẩu Bò Cuộn Nấm</div>
+                                                    </label>
+                                                </li>                                                
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ==== Page 2 ==== -->
+                            <div class="page page2">
+                                <div class="surface">
+                                    <div class="page__content">
+                                        <h1>Thực Đơn</h1>
+                                        <div>
+                                            <ol class="page__listMenu">
+                                                <li>
+                                                    <input type="checkbox" name="10" id="GaQuayXaXiu" value="Gà Quay Xá Xíu" />
+                                                    <label for="GaQuayXaXiu">
+                                                        <img src="~/Content/assets/images/food/gaquayxaxiu.jpg" />
+                                                        <div>Gà Quay Xá Xíu</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="11" id="MiUdonHaiSan" value="Mì Udon Hải Sản" />
+                                                    <label for="MiUdonHaiSan">
+                                                        <img src="~/Content/assets/images/food/miudonhaisan.jpg" />
+                                                        <div>Mì Udon Hải Sản</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="12" id="MucXuyenTieu" value="Mực Xuyên Tiêu" />
+                                                    <label for="MucXuyenTieu">
+                                                        <img src="~/Content/assets/images/food/mucxuyentieu.jpg" />
+                                                        <div>Mực Xuyên Tiêu</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="13" id="PhileBolot" value="Phile Bồ Lốt" />
+                                                    <label for="PhileBolot">
+                                                        <img src="~/Content/assets/images/food/philebolot.jpg" />
+                                                        <div>Phile Bồ Lốt</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="14" id="PhomaiDau" value="Phô Mai Dâu" />
+                                                    <label for="PhomaiDau">
+                                                        <img src="~/Content/assets/images/food/phomaidau.jpg" />
+                                                        <div>Phô Mai Dâu</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="15" id="RauCauToYen" value="Rau Câu Tổ Yến" />
+                                                    <label for="RauCauToYen">
+                                                        <img src="~/Content/assets/images/food/raucautoyenhatchia.jpg" />
+                                                        <div>Rau Câu Tổ Yến</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="16" id="SupCua" value="Súp Cua" />
+                                                    <label for="SupCua">
+                                                        <img src="~/Content/assets/images/food/supcua.jpg" />
+                                                        <div>Súp Cua</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="17" id="SupHoanhThanh" value="Súp Hoành Thánh" />
+                                                    <label for="SupHoanhThanh">
+                                                        <img src="~/Content/assets/images/food/suphoanhthanh.jpg" />
+                                                        <div>Súp Hoành Thánh</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="18" id="TomCangHap" value="Tôm Càng Hấp" />
+                                                    <label for="TomCangHap">
+                                                        <img src="~/Content/assets/images/food/tomcanghap.jpg" />
+                                                        <div>Tôm Càng Hấp</div>
+                                                    </label>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <ol class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0)">3</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="inside">
+                                    <div class="page__content">
+                                        <h1>Thực Đơn</h1>
+                                        <div>
+                                            <ol class="page__listMenu">
+                                                <li>
+                                                    <input type="checkbox" name="19" id="TomCangNuong" value="Tôm Càng Nướng" />
+                                                    <label for="TomCangNuong">
+                                                        <img src="~/Content/assets/images/food/tomcangnuong.jpg" />
+                                                        <div>Tôm Càng Nướng</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="20" id="UcVitNuong" value="Ức Vịt Nướng" />
+                                                    <label for="UcVitNuong">
+                                                        <img src="~/Content/assets/images/food/ucvitnuong.jpg" />
+                                                        <div>Ức Vịt Nướng</div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="21" id="ChanBeNuong" value="Chân Bê Nướng" />
+                                                    <label for="ChanBeNuong">
+                                                        <img src="~/Content/assets/images/food/chanbenuong.jpg" />
+                                                        <div>Chân Bê Nướng</div>
+                                                    </label>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- ==== Page 3 ==== -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==== Script ==== -->
+<script src="~/Content/scripts/book.js"></script>
