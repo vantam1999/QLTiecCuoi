@@ -7,70 +7,171 @@
 @section bgTop {
     @Html.Partial("_BgTop")
 }
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link href="~/Content/Myfolder/css/my_css.css" rel="stylesheet" />
-<script>
-    $(document).ready(function () {
-        $('.menu_sanhtiec ul li').click(function () {
-            $('li').removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-</script>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <h1 id="title">Sảnh tiệc</h1>
+
+<section class="section section__hall">
+    <div class="container">
+        <div class="section__home">
+            <div class="section__home--content">
+                <h1>Sảnh Tiệc</h1>                
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div style="margin:0 auto; height:100%;">
-                    <div class="menu_sanhtiec">
-                        <ul>
-                            <li class="active"><a href="#"><b>Sảnh Diamond</b></a></li>
-                            <li><a href="#"><b>Sảnh Pure Diamond</b></a></li>
-                            <li><a href="#"><b>Sảnh Ruby</b></a></li>
-                            <li><a href="#"><b>Sảnh Sapphire</b></a></li>
-                            <li><a href="#"><b>Sảnh Amethyst</b></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div id="demo" class="carousel slide" data-ride="carousel" align="center">
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
+            <div class="section__home--tab">
+                <ol class="tab">
+                    <li class="tab__item">
+                        <div class="tab__link active__tab" target="diamond">Sảnh Diamond</div>
+                    </li>
+                    <li class="tab__item">
+                        <div class="tab__link" target="ruby">Sảnh Ruby</div>
+                    </li>
+                    <li class="tab__item">
+                        <div class="tab__link" target="sapphire">Sảnh Sapphire</div>
+                    </li>
+                    <li class="tab__item">
+                        <div class="tab__link" target="pure">Sảnh Pure Diamond</div>
+                    </li>
+                    <li class="tab__item">
+                        <div class="tab__link" target="amethyst">Sảnh Amethyst</div>
+                    </li>
+                </ol>
+                <!-- ==== Carousel Sanh Diamond ==== -->
+                <div id="diamond" class="carousel carousel-hall slide active__carousel" data-ride="carousel">
+                    <!-- ==== The slideshow ==== -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="~/Content/Myfolder/images/sanhtiec/vang1-1024x682.jpg" alt="Los Angeles" width="1100" height="500">
+                            <img src="~/Content/assets/images/sanh/diamond-1.jpg" alt="" width="1100" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img src="~/Content/Myfolder/images/sanhtiec/vang2-1024x682.jpg" alt="Chicago" width="1100" height="500">
+                            <img src="~/Content/assets/images/sanh/diamond-2.jpg" alt="" width="1100" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img src="~/Content/Myfolder/images/sanhtiec/vang3-1024x682.jpg" alt="New York" width="1100" height="500">
+                            <img src="~/Content/assets/images/sanh/diamond-3.jpg" alt="" width="1100" height="500">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <!-- ==== Indicators ==== -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#diamond" data-slide-to="0" class="active"></li>
+                        <li data-target="#diamond" data-slide-to="1"></li>
+                        <li data-target="#diamond" data-slide-to="2"></li>
+                    </ul>
+                    <!-- ==== Left and right controls ==== -->
+                    <a class="carousel-control-prev" href="#diamond" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <a class="carousel-control-next" href="#diamond" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <!-- ==== Carousel Sanh Ruby ==== -->
+                <div id="ruby" class="carousel carousel-hall slide" data-ride="carousel">
+                    <!-- ==== The slideshow ==== -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/assets/images/sanh/ruby-1.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/ruby-2.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/ruby-3.jpg" alt="" width="1100" height="500">
+                        </div>
+                    </div>
+                    <!-- ==== Indicators ==== -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#ruby" data-slide-to="0" class="active"></li>
+                        <li data-target="#ruby" data-slide-to="1"></li>
+                        <li data-target="#ruby" data-slide-to="2"></li>
+                    </ul>
+                    <!-- ==== Left and right controls ==== -->
+                    <a class="carousel-control-prev" href="#ruby" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#ruby" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <!-- ==== Carousel Sanh Sapphire ==== -->
+                <div id="sapphire" class="carousel carousel-hall slide" data-ride="carousel">
+                    <!-- ==== The slideshow ==== -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/assets/images/sanh/sapphire-1.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/sapphire-2.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/sapphire-3.jpg" alt="" width="1100" height="500">
+                        </div>
+                    </div>
+                    <!-- ==== Indicators ==== -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#sapphire" data-slide-to="0" class="active"></li>
+                        <li data-target="#sapphire" data-slide-to="1"></li>
+                        <li data-target="#sapphire" data-slide-to="2"></li>
+                    </ul>
+                    <!-- ==== Left and right controls ==== -->
+                    <a class="carousel-control-prev" href="#sapphire" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#sapphire" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <!-- ==== Carousel Sanh Pure Diamond ==== -->
+                <div id="pure" class="carousel carousel-hall slide" data-ride="carousel">
+                    <!-- ==== The slideshow ==== -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/assets/images/sanh/pure-diamond.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/diamond-2.jpg" alt="" width="1100" height="500">
+                        </div>
+                    </div>
+                    <!-- ==== Indicators ==== -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#pure" data-slide-to="0" class="active"></li>
+                        <li data-target="#pure" data-slide-to="1"></li>
+                    </ul>
+                    <!-- ==== Left and right controls ==== -->
+                    <a class="carousel-control-prev" href="#pure" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#pure" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <!-- ==== Carousel Sanh Amethyst ==== -->
+                <div id="amethyst" class="carousel carousel-hall slide" data-ride="carousel">
+                    <!-- ==== The slideshow ==== -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/assets/images/sanh/amethyst-1.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/amethyst-2.jpg" alt="" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/images/sanh/amethyst-3.jpg" alt="" width="1100" height="500">
+                        </div>
+                    </div>
+                    <!-- ==== Indicators ==== -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#amethyst" data-slide-to="0" class="active"></li>
+                        <li data-target="#amethyst" data-slide-to="1"></li>
+                        <li data-target="#amethyst" data-slide-to="2"></li>
+                    </ul>
+                    <!-- ==== Left and right controls ==== -->
+                    <a class="carousel-control-prev" href="#amethyst" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#amethyst" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
             </div>
-            <br />
-            <br />
         </div>
     </div>
-</body>
+</section>
 
+<script src="~/Content/scripts/tabHall.js"></script>

@@ -1,19 +1,10 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #f1f1f1;
-}
-
-#title {
+﻿#title {
     text-align: center;
     display: block;
     color: #002a66;
     font-family: 'Dancing Script', cursive;
     font-weight: 400;
-}
+} 
 /*About*/
 .elenment_1 > div > img {
     background-size: cover !important;
@@ -26,8 +17,7 @@ body {
     color: #002a66;
     font-family: 'Dancing Script', cursive;
     font-weight: 400;
-    margin: 250px 0;
-    /*font-size:100px;*/
+    margin: 250px 0;    
 }
 
     .element_2 > div:not(#btn) {
@@ -53,7 +43,7 @@ body {
     padding: 1% 5% 1% 5%;
 }
 
-    .text p, strong, ul, li {
+    .text p, strong {
         color: #002a66;
         padding-bottom: 0.5em;
         font-size: 18px;
@@ -63,79 +53,8 @@ body {
         list-style-type: decimal;
         padding-left: 20px;
     }
-/*sanh tiec*/
-.menu_sanhtiec {
-    width: 45%;
-    margin: 20px auto;
-}
 
-    .menu_sanhtiec > ul > li {
-        float: left;
-        width: auto;
-        height: 60px;
-        text-align: center;
-        margin-left: 1px;
-        margin-right: 1px;
-    }
-
-        .menu_sanhtiec > ul > li > a {
-            width: 100% !important;
-            height: 50px;
-            color: #002a66;
-            text-decoration: none;
-            display: block;
-            line-height: 50px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-
-        .menu_sanhtiec > ul > li.active {
-            border-bottom: 3px solid #002a66;
-        }
-
-            .menu_sanhtiec > ul > li.active a {
-                background-color: #002a66;
-                border-radius: 20px;
-                color: white;
-            }
-        /*.menu_sanhtiec > ul > li:hover:not(.active) a{
-    background-color:#002a66;
-    border-radius:20px;
-    color:white;
-}*/
-        .menu_sanhtiec > ul > li:hover:not(.active) {
-            border-bottom: 3px solid #002a66;
-        }
-
-.carousel-inner img {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 55%;
-    height: 50%;
-}
-
-.carousel-control-prev {
-    left: 400px;
-}
-
-.carousel-control-next {
-    right: 400px;
-}
-
-.carousel-control-prev-icon {
-    width: 50px;
-    height: 50px;
-    color: #000000;
-}
-
-.carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-}
-
-.carousel-indicators {
-    bottom: 40px;
-}
+  
 /*Thuc don*/
 .imageFood img {
     width: 100%;

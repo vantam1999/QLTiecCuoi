@@ -23,6 +23,14 @@ ul {
 select, input {
   max-width: 100%; }
 
+.element_1 {
+  overflow: hidden; }
+  .element_1 img {
+    width: 100%; }
+
+.col__one {
+  padding-left: 0; }
+
 .auth__bg {
   width: 100%;
   margin-top: 60px;
@@ -684,6 +692,57 @@ footer {
   display: none; }
   .header__nav--user i {
     font-size: 20px; }
+
+.section__hall {
+  padding-bottom: 30px; }
+  .section__hall .tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px 200px; }
+    .section__hall .tab__item:hover .tab__link::after {
+      visibility: visible;
+      transform: translateX(0);
+      opacity: 1;
+      transition: .4s; }
+    .section__hall .tab__link {
+      position: relative;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 17px; }
+      .section__hall .tab__link::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #5d87c3;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: .4s;
+        visibility: hidden; }
+  .section__hall .carousel {
+    display: none; }
+  .section__hall .carousel-item img {
+    width: 100%;
+    object-fit: cover; }
+
+.section__hall .tab__item .active__tab {
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: #002a66;
+  border-radius: 25px;
+  zoom: 110%; }
+  .section__hall .tab__item .active__tab::after {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+    transition: .4s; }
+
+.section__hall .active__carousel {
+  display: block; }
 
 .homePage__section {
   margin: 30px 0; }
