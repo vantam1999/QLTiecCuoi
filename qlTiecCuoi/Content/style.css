@@ -277,214 +277,63 @@ select, input {
   transition: .4s;
   visibility: visible; }
 
-.book__album {
-  position: relative; }
+.book__tabs {
+  margin: 30px 0; }
 
-.book__album form {
-  position: relative;
-  width: 100%; }
-
-.album__center {
-  position: relative;
-  width: 100%;
-  height: 100vh; }
-
-.album__left,
-.album__right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%; }
-
-.album__left {
-  background: url("assets/images/background-9.jpg");
-  box-shadow: 0px 1px 5px #000000;
-  transform: rotateY(0);
-  transform-origin: left;
-  transition: .5s;
-  z-index: 2; }
-
-.album__left--surface {
-  padding: 20px;
-  text-align: center; }
-
-.infoRestaurant {
-  margin-top: 0 !important; }
-  .infoRestaurant img {
-    width: 150px; }
-  .infoRestaurant__name {
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 10px 0; }
-  .infoRestaurant .cross {
+.book .tabs__direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; }
+  .book .tabs__direction > li {
+    margin: 0 20px; }
+    .book .tabs__direction > li:hover button::after {
+      visibility: visible;
+      transform: translateX(0);
+      opacity: 1;
+      transition: .4s; }
+  .book .tabs__direction button {
     position: relative;
-    width: 250px;
-    height: 2px;
-    background-color: #000000;
-    margin: 0 auto; }
-    .infoRestaurant .cross::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -5px;
-      background-color: #000000;
-      height: 2px; }
-  .infoRestaurant .openMenu {
-    padding: 5px 15px;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 15px 0;
     cursor: pointer;
-    outline: none;
-    border: none;
-    background: transparent;
-    animation: changeColor 4s linear infinite; }
-
-.form__name--vc label {
-  font-weight: 700;
-  margin-right: 15px;
-  vertical-align: sub; }
-
-.form__name--vc input {
-  font-weight: 700;
-  padding: 5px 10px;
-  border: none;
-  outline: none;
-  background: transparent;
-  border-bottom: 2px solid #000000; }
-
-.listMenu {
-  margin-top: 40px !important; }
-  .listMenu li {
-    position: relative;
-    margin: 15px 0; }
-    .listMenu li:hover a {
-      color: red; }
-    .listMenu li:hover::after {
-      background-color: red; }
-    .listMenu li:hover .book__confirmed {
-      color: red; }
-    .listMenu li a {
-      font-weight: bold;
-      font-size: 18px;
-      color: #b73030;
-      padding: 10px; }
-  .listMenu li::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 2px;
-    background-color: #66686b; }
-  .listMenu .book__confirmed {
+    font-weight: 600;
+    font-size: 17px;
+    color: #002a66;
     border: none;
     background: none;
-    color: #b73030;
-    font-weight: bold;
-    font-size: 18px; }
+    outline: none; }
+    .book .tabs__direction button::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: #5d87c3;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: .4s;
+      visibility: hidden; }
 
-.album__left--inside img {
-  width: 100%;
-  height: 100%; }
+.book .tabs__content {
+  border: 2px solid #002a66;
+  padding: 20px 0; }
+  .book .tabs__content .tabs__item {
+    display: none; }
 
-.album__right {
-  background-color: aqua;
-  z-index: 1; }
+.book__tabs .tabs__direction li .active__direction {
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: #002a66;
+  border-radius: 25px;
+  zoom: 110%; }
+  .book__tabs .tabs__direction li .active__direction::after {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+    transition: .4s; }
 
-.closeMenu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #000000;
-  background-color: red;
-  outline: none;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 25px;
-  font-weight: bold;
-  z-index: 20; }
-
-.page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  border-left: 1px solid #000000;
-  transform-origin: left;
-  transition: .5s; }
-  .page .surface,
-  .page .inside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px; }
-
-.page__content h1 {
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 20px; }
-
-.page__listMenu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%; }
-  .page__listMenu li {
-    width: calc(100% / 3 - 10px); }
-  .page__listMenu label {
-    width: 100%;
-    cursor: pointer; }
-    .page__listMenu label img {
-      width: 100%;
-      height: 108px;
-      object-fit: cover; }
-    .page__listMenu label div {
-      text-align: center; }
-
-.page1 {
-  z-index: 4; }
-
-.surface {
-  width: 100%;
-  height: 100%; }
-
-.inside {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-  visibility: hidden; }
-
-@-webkit-keyframes changeColor {
-  0% {
-    color: #287bf3; }
-  40% {
-    color: #f70707; }
-  80% {
-    color: #139404; }
-  100% {
-    color: #78abf3; } }
-
-.activeRotateY {
-  transform: rotateY(180deg);
-  transition: .5s; }
-
-.activeShow {
-  visibility: visible; }
-
-.activezIndex {
-  z-index: 5; }
+.book .book__tabs .tabs__content .active__tabs {
+  display: block; }
 
 footer {
   position: relative;
