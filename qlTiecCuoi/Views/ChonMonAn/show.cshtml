@@ -1,0 +1,36 @@
+﻿@model qlTiecCuoi.Models._MonAn
+<table class="table" style="text-align:center;">
+    <tr>
+        <th>Tên món</th>
+        <th>Hình ảnh</th>
+        <th>Giá</th>
+        <th>Ghi chú</th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        double tongtien = 0;
+        foreach (var item in Model.monans)
+        {
+            tongtien += Convert.ToDouble(item.Gia);
+            <tr>
+                <td>@Html.DisplayFor(m => item.TenMon)</td>
+                <td><img src="~/Content/Myfolder/images/food/@Url.Content(item.HinhAnh)" style="width:150px; height:150px;" /></td>
+                <td>@Html.DisplayFor(m => item.Gia)</td>
+                <td>@Html.DisplayFor(m => item.GhiChu)</td>
+                <td>
+                    <a class="btn btn-primary" href="/ChonMonAn/delete/@item.IDMonAn">Xóa</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>Tổng tiền món ăn</b></td>
+            <td>
+                @tongtien
+            </td>
+        </tr>
+    }
+</table>

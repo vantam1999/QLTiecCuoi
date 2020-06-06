@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<qlTiecCuoi.Models.MonAn>
 @{
     ViewBag.Title = "Thực đơn";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,66 +7,53 @@
 @section bgTop {
     @Html.Partial("_BgTop")
 }
-<link href="~/Content/Myfolder/css/my_css.css" rel="stylesheet" />
+<head>
+    <link href="~/Content/Myfolder/css/my_css.css" rel="stylesheet" />
+    <style>
+        .card {
+            text-align: center;
+            margin-top: 20px;
+            /*width: 250px;*/
+            height: auto;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.2);
+            }
+
+        #name {
+            font-weight: bold;
+        }
+
+        #price {
+            display: inline!important;
+            color: red;
+        }
+    </style>
+</head>
+
 <body>
     <div class="container-fluid">
         <h1 id="title">Thực đơn</h1>
-        <div class="imageFood">
-            <div class="row">
+        <div class="row">
+            @foreach (var item in Model)
+            {
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/1.jpg" alt="imageFood1" /></a>
+                    <div class="card">
+                        <div id="name">@Html.DisplayFor(Model => item.TenMon)</div>
+                        <img src="~/Content/Myfolder/images/food/@Url.Content(item.HinhAnh)" style=" margin:10px;" />
+                        <b>Price: <i style="color:red;">@Html.DisplayFor(Model => item.Gia)</i></b>
+                        @*<a href="/ShoppingCart/AddtoCart/@item.IDProduct"><img src="~/Content/images/giohang.png" style="width:25px; height:25px; margin:5px;" /></a>*@
+                        <a href="/ChonMonAn/AddtoList/@item.IDMonAn"><input type="submit" class="btn btn-primary" value="Thêm" style="width:120px; height:40px; margin:5px auto;" /></a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/2.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/3.jpg" alt="imageFood1" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/4.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/5.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/6.jpg" alt="imageFood1" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/7.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/8.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/9.jpg" alt="imageFood1" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/10.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/11.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/12.jpg" alt="imageFood1" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/13.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/14.jpg" alt="imageFood1" /></a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#"><img src="~/Content/Myfolder/images/food/15.jpg" alt="imageFood1" /></a>
-                </div>
-            </div>
+            }
         </div>
     </div>
+    <br />
+    <br />
 </body>

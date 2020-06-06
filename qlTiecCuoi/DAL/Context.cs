@@ -20,5 +20,7 @@ namespace qlTiecCuoi.DAL
         public DbSet<DatTiec> dbdattiec { get; set; }
         public DbSet<HoaDon> dbhoadon { get; set; }
         public DbSet<LoaiSanh> dbloaisanh { get; set; }
+        public DbSet<MonAn_DatTiec> monan_dattiec { get; set; }
+        public DbSet<DichVu_DatTiec> dichvu_dattiec { get; set; }
     }
 }

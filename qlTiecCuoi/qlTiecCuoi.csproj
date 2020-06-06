@@ -132,19 +132,47 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ChonMonAnController.cs" />
+    <Compile Include="Controllers\DatTiecsController.cs" />
+    <Compile Include="Controllers\DIchVuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MonAnController.cs" />
     <Compile Include="Controllers\WeddingController.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006031516354_InitialCreate.cs" />
+    <Compile Include="Migrations\202006031516354_InitialCreate.designer.cs">
+      <DependentUpon>202006031516354_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031550521_hinhanh_monan.cs" />
+    <Compile Include="Migrations\202006031550521_hinhanh_monan.designer.cs">
+      <DependentUpon>202006031550521_hinhanh_monan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031701506_xoasoluongdichvu.cs" />
+    <Compile Include="Migrations\202006031701506_xoasoluongdichvu.designer.cs">
+      <DependentUpon>202006031701506_xoasoluongdichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006060709082_fixmodel.cs" />
+    <Compile Include="Migrations\202006060709082_fixmodel.designer.cs">
+      <DependentUpon>202006060709082_fixmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006060715302_dbset.cs" />
+    <Compile Include="Migrations\202006060715302_dbset.designer.cs">
+      <DependentUpon>202006060715302_dbset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatTiec.cs" />
     <Compile Include="Models\DIchVu.cs" />
+    <Compile Include="Models\DichVu_DatTiec.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\LoaiSanh.cs" />
     <Compile Include="Models\MonAn.cs" />
+    <Compile Include="Models\MonAn_DatTiec.cs" />
     <Compile Include="Models\SanhTiec.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\_MonAn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -427,6 +455,20 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Shared\_BgTop.cshtml" />
+    <Content Include="Views\MonAn\Create.cshtml" />
+    <Content Include="Views\MonAn\Delete.cshtml" />
+    <Content Include="Views\MonAn\Edit.cshtml" />
+    <Content Include="Views\MonAn\Index.cshtml" />
+    <Content Include="Views\DIchVu\Create.cshtml" />
+    <Content Include="Views\DIchVu\Delete.cshtml" />
+    <Content Include="Views\DIchVu\Edit.cshtml" />
+    <Content Include="Views\DIchVu\Index.cshtml" />
+    <Content Include="Views\DatTiecs\Create.cshtml" />
+    <Content Include="Views\DatTiecs\Delete.cshtml" />
+    <Content Include="Views\DatTiecs\Details.cshtml" />
+    <Content Include="Views\DatTiecs\Edit.cshtml" />
+    <Content Include="Views\DatTiecs\Index.cshtml" />
+    <Content Include="Views\ChonMonAn\show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -463,6 +505,23 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006031516354_InitialCreate.resx">
+      <DependentUpon>202006031516354_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031550521_hinhanh_monan.resx">
+      <DependentUpon>202006031550521_hinhanh_monan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031701506_xoasoluongdichvu.resx">
+      <DependentUpon>202006031701506_xoasoluongdichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006060709082_fixmodel.resx">
+      <DependentUpon>202006060709082_fixmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006060715302_dbset.resx">
+      <DependentUpon>202006060715302_dbset.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

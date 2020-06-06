@@ -1,4 +1,4 @@
-﻿
+﻿@model qlTiecCuoi.Models.User
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,7 +6,8 @@
 
 <div class="auth__bg register">
     <div class="auth__home register__home">
-        <form action="/Auth/Register" method="post">
+        @using (Html.BeginForm("Register", "Auth", FormMethod.Post))
+        {
             <h1>REGISTER FORM</h1>
             <div class="auth__box">
                 <div class="auth__box--left">
@@ -18,25 +19,30 @@
                 <div class="auth__box--right">
                     <div class="form-group">
                         <input type="text" id="FirstName" name="FirstName" placeholder="First Name" />
+                        @Html.ValidationMessageFor(m => m.FirstName)
                     </div>
                     <div class="form-group">
                         <input type="text" id="LastName" name="LastName" placeholder="Last Name" />
+                        @Html.ValidationMessageFor(m => m.LastName)
                     </div>
                     <div class="form-group">
                         <input type="text" id="Email" name="Email" placeholder="mail@example.com" />
+                        @Html.ValidationMessageFor(m => m.Email)
                     </div>
                     <div class="form-group">
                         <input type="password" id="Password" name="Password" placeholder="Password" />
+                        @Html.ValidationMessageFor(m => m.Password)
                     </div>
                     <div class="form-group">
                         <input type="password" id="Confirmpassword" name="Confirmpassword" placeholder="Confirm Password" />
+                        @Html.ValidationMessageFor(m => m.Confirmpassword)
                     </div>
                     <div class="form-group">
                         <button type="submit" class="auth__confirmed register__confirmed">Register</button>
                     </div>
                 </div>
-            </div>            
-        </form>
-    </div>    
+            </div>
+        }
+    </div>
 </div>
 

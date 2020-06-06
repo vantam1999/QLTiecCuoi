@@ -1,4 +1,4 @@
-﻿
+﻿@model qlTiecCuoi.Models.User
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -24,6 +24,10 @@
                         </div>
                         <div class="form-group">
                             <!-- Error -->
+                            @if(ViewBag.login != null)
+                            {
+                                <div>@ViewBag.login</div>
+                            }
                         </div>
                         <div class="form-group">
                             <button type="submit" class="auth__confirmed login__confirmed">Login</button>
