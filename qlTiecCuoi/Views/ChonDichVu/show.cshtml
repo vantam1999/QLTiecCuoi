@@ -1,0 +1,33 @@
+﻿@model qlTiecCuoi.Models._DichVu
+<table class="table" style="text-align:center;">
+    <tr>
+        <th>Tên dịch vụ</th>
+        <th>Hình ảnh</th>
+        <th>Giá</th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        double tongtien = 0;
+        foreach (var item in Model.dichvus)
+        {
+            tongtien += Convert.ToDouble(item.DonGia);
+            <tr>
+                <td>@Html.DisplayFor(m => item.TenDichVu)</td>
+                <td><img src="~/Content/assets/images/trang-tri/@Url.Content(item.HinhAnh)" style="width:150px; height:150px;" /></td>
+                <td>@Html.DisplayFor(m => item.DonGia)</td>
+                <td>
+                    <a class="btn btn-primary" href="/ChonDichVu/delete/@item.IDDichVu">Xóa</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td><b>Tổng tiền dịch vụ</b></td>
+            <td>
+                @tongtien
+            </td>
+        </tr>
+    }
+</table>

@@ -129,22 +129,34 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ChonDichVuController.cs" />
+    <Compile Include="Controllers\ChonMonAnController.cs" />
+    <Compile Include="Controllers\DIchVuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MonAnController.cs" />
+    <Compile Include="Controllers\SanhTiecsController.cs" />
     <Compile Include="Controllers\WeddingController.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006071119478_initData.cs" />
+    <Compile Include="Migrations\202006071119478_initData.designer.cs">
+      <DependentUpon>202006071119478_initData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatTiec.cs" />
     <Compile Include="Models\DIchVu.cs" />
+    <Compile Include="Models\OrderDichVu.cs" />
     <Compile Include="Models\HoaDon.cs" />
-    <Compile Include="Models\LoaiSanh.cs" />
     <Compile Include="Models\MonAn.cs" />
+    <Compile Include="Models\OrderMonAn.cs" />
     <Compile Include="Models\SanhTiec.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\_DichVu.cs" />
+    <Compile Include="Models\_MonAn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -264,6 +276,10 @@
     <Content Include="Content\scripts\social.js" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style.min.css" />
+    <Content Include="Content\style\header.css" />
+    <Content Include="Content\style\layout.css" />
+    <Content Include="Content\style\main.css" />
+    <Content Include="Content\style\sidebar.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -288,10 +304,6 @@
     <Content Include="Content\scss\_module.scss" />
     <Content Include="Content\scss\_var.scss" />
     <Content Include="Content\style.scss" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -427,10 +439,35 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Shared\_BgTop.cshtml" />
+    <Content Include="Views\MonAn\Create.cshtml" />
+    <Content Include="Views\MonAn\Delete.cshtml" />
+    <Content Include="Views\MonAn\Edit.cshtml" />
+    <Content Include="Views\MonAn\Index.cshtml" />
+    <Content Include="Views\DIchVu\Create.cshtml" />
+    <Content Include="Views\DIchVu\Delete.cshtml" />
+    <Content Include="Views\DIchVu\Edit.cshtml" />
+    <Content Include="Views\DIchVu\Index.cshtml" />
+    <Content Include="Views\DatTiecs\Create.cshtml" />
+    <Content Include="Views\DatTiecs\Delete.cshtml" />
+    <Content Include="Views\DatTiecs\Details.cshtml" />
+    <Content Include="Views\DatTiecs\Edit.cshtml" />
+    <Content Include="Views\DatTiecs\Index.cshtml" />
+    <Content Include="Views\ChonMonAn\show.cshtml" />
+    <Content Include="Views\ChonDichVu\show.cshtml" />
+    <Content Include="Views\SanhTiecs\Create.cshtml" />
+    <Content Include="Views\SanhTiecs\Delete.cshtml" />
+    <Content Include="Views\SanhTiecs\Details.cshtml" />
+    <Content Include="Views\SanhTiecs\Edit.cshtml" />
+    <Content Include="Views\SanhTiecs\Index.cshtml" />
+    <Content Include="Views\SanhTiecs\chonsanh.cshtml" />
+    <Content Include="Views\SanhTiecs\thongtinsanh.cshtml" />
+    <Content Include="Views\Wedding\Thongbao.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\DatTiec\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
@@ -463,6 +500,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006071119478_initData.resx">
+      <DependentUpon>202006071119478_initData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -9,11 +9,6 @@ namespace qlTiecCuoi.Models
 {
     public class DatTiec
     {
-        public DatTiec()
-        {
-            this.monans = new HashSet<MonAn>();
-            this.dichvus = new HashSet<DIchVu>();
-        }
         [Key]
         public int IDDatTiec { get; set; }
         [ForeignKey("user")]
@@ -22,15 +17,18 @@ namespace qlTiecCuoi.Models
         [ForeignKey("sanhtiec")]
         public int IDSanh { get; set; }
         public SanhTiec sanhtiec { get; set; }
-        public ICollection<MonAn> monans { get; set; }
-        public ICollection<DIchVu> dichvus { get; set; }
         public string TenCoDau { get; set; }
         public string TenChuRe { get; set; }
+        public string SDT { get; set; }
         public DateTime Ngay { get; set; }
         public string Ca { get; set; }
         public int SoLuongBan { get; set; }
         public int SoBanDuTru { get; set; }
-        public double TienCoc { get; set; }
-        public string GhiChu { get; set; }
+        //[ForeignKey("OrderMonAn")]
+        //public int IDOrderMonAn { get; set; }
+        //public OrderMonAn OrderMonAn { get; set; }
+        //[ForeignKey("OrderDichVu")]
+        //public int IDOrderDichVu { get; set; }
+        //public OrderDichVu OrderDichVu { get; set; }
     }
 }

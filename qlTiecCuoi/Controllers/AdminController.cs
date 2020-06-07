@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace qlTiecCuoi.Areas.Admin.Controllers
+namespace qlTiecCuoi.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
-        // GET: Admin/Home
+        // GET: Admin
         public ActionResult Index()
         {
             return View();
