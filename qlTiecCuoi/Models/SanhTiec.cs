@@ -13,12 +13,12 @@ namespace qlTiecCuoi.Models
         public int IDSanh { get; set; }
         [Required]
         public string TenSanh { get; set; }
-        [ForeignKey("loaisanh")]
-        public int IDLoaiSanh { get; set; }
-        public LoaiSanh loaisanh { get; set; }
+        public string HinhAnh { get; set; }
         [Required]
         public int SoLuongBan { get; set; }
         [Required]
         public double DonGia { get; set; }
+        public string GhiChu { get; set; }
+        public List<SanhTiec> danhsachsanh { get; set; }
     }
 }

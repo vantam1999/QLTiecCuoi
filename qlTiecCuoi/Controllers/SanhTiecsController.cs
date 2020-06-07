@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,118 +12,135 @@ using qlTiecCuoi.Models;
 
 namespace qlTiecCuoi.Controllers
 {
-    public class DatTiecsController : Controller
+    public class SanhTiecsController : Controller
     {
         private Context db = new Context();
 
-        // GET: DatTiecs
+        // GET: SanhTiecs
         public ActionResult Index()
         {
-            var dbdattiec = db.dbdattiec.Include(d => d.sanhtiec).Include(d => d.user);
-            return View(dbdattiec.ToList());
+            return View(db.dbsanhtiec.ToList());
         }
 
-        // GET: DatTiecs/Details/5
+        // GET: SanhTiecs/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DatTiec datTiec = db.dbdattiec.Find(id);
-            if (datTiec == null)
+            SanhTiec sanhTiec = db.dbsanhtiec.Find(id);
+            if (sanhTiec == null)
             {
                 return HttpNotFound();
             }
-            return View(datTiec);
+            return View(sanhTiec);
         }
 
-        // GET: DatTiecs/Create
+        // GET: SanhTiecs/Create
         public ActionResult Create()
         {
-            ViewBag.IDSanh = new SelectList(db.dbsanhtiec, "IDSanh", "TenSanh");
-            ViewBag.IDUser = new SelectList(db.dbuser, "IDUser", "FirstName");
             return View();
         }
 
-        // POST: DatTiecs/Create
+        // POST: SanhTiecs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDDatTiec,IDUser,IDSanh,TenCoDau,TenChuRe,SDT,Ngay,Ca,SoLuongBan,SoBanDuTru")] DatTiec datTiec)
+        public ActionResult Create([Bind(Include = "IDSanh,TenSanh,HinhAnh,SoLuongBan,DonGia,GhiChu")] SanhTiec sanhTiec, HttpPostedFileBase HinhAnh)
         {
             if (ModelState.IsValid)
             {
-                db.dbdattiec.Add(datTiec);
+                if (HinhAnh != null)
+                {
+                    var filename = Path.GetFileName(HinhAnh.FileName);
+                    sanhTiec.HinhAnh = filename;
+                    string path = Path.Combine(Server.MapPath("~/Content/assets/images/sanh/"), filename);
+                    HinhAnh.SaveAs(path);
+                }
+                else
+                    sanhTiec.HinhAnh = "amethyst-1.jpg";
+                db.dbsanhtiec.Add(sanhTiec);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IDSanh = new SelectList(db.dbsanhtiec, "IDSanh", "TenSanh", datTiec.IDSanh);
-            ViewBag.IDUser = new SelectList(db.dbuser, "IDUser", "FirstName", datTiec.IDUser);
-            return View(datTiec);
+            return View(sanhTiec);
         }
 
-        // GET: DatTiecs/Edit/5
+        // GET: SanhTiecs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DatTiec datTiec = db.dbdattiec.Find(id);
-            if (datTiec == null)
+            SanhTiec sanhTiec = db.dbsanhtiec.Find(id);
+            if (sanhTiec == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.IDSanh = new SelectList(db.dbsanhtiec, "IDSanh", "TenSanh", datTiec.IDSanh);
-            ViewBag.IDUser = new SelectList(db.dbuser, "IDUser", "FirstName", datTiec.IDUser);
-            return View(datTiec);
+            return View(sanhTiec);
         }
 
-        // POST: DatTiecs/Edit/5
+        // POST: SanhTiecs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDDatTiec,IDUser,IDSanh,TenCoDau,TenChuRe,SDT,Ngay,Ca,SoLuongBan,SoBanDuTru")] DatTiec datTiec)
+        public ActionResult Edit([Bind(Include = "IDSanh,TenSanh,HinhAnh,SoLuongBan,DonGia,GhiChu")] SanhTiec sanhTiec)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(datTiec).State = EntityState.Modified;
+                db.Entry(sanhTiec).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IDSanh = new SelectList(db.dbsanhtiec, "IDSanh", "TenSanh", datTiec.IDSanh);
-            ViewBag.IDUser = new SelectList(db.dbuser, "IDUser", "FirstName", datTiec.IDUser);
-            return View(datTiec);
+            return View(sanhTiec);
         }
 
-        // GET: DatTiecs/Delete/5
+        // GET: SanhTiecs/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DatTiec datTiec = db.dbdattiec.Find(id);
-            if (datTiec == null)
+            SanhTiec sanhTiec = db.dbsanhtiec.Find(id);
+            if (sanhTiec == null)
             {
                 return HttpNotFound();
             }
-            return View(datTiec);
+            return View(sanhTiec);
         }
 
-        // POST: DatTiecs/Delete/5
+        // POST: SanhTiecs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            DatTiec datTiec = db.dbdattiec.Find(id);
-            db.dbdattiec.Remove(datTiec);
+            SanhTiec sanhTiec = db.dbsanhtiec.Find(id);
+            db.dbsanhtiec.Remove(sanhTiec);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult chonsanh()
+        {
+            SanhTiec s = new SanhTiec();
+            s.danhsachsanh = db.dbsanhtiec.ToList();
+            return PartialView(s);
+        }
+        public ActionResult thongtinsanh(int id)
+        {
+            var sanh = db.dbsanhtiec.Where(m => m.IDSanh == id).FirstOrDefault();
+            if (sanh!= null)
+            {
+                ViewBag.sanh = sanh;
+                return PartialView(sanh);
+            }
+            else
+                return PartialView();
         }
         protected override void Dispose(bool disposing)
         {

@@ -45,15 +45,6 @@ namespace qlTiecCuoi.Controllers
             monan.delete(id);
             return RedirectToAction("Book", "Wedding");
         }
-        public ActionResult dattiec()
-        {
-            _MonAn monan = Session["monan"] as _MonAn;
-            foreach (var item in  monan.monans)
-            {
-                MonAn_DatTiec m = new MonAn_DatTiec();
-                m.IDMonAn = item.IDMonAn;
-            }
-            return View();
-        }
+        
     }
 }
