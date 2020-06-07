@@ -7,13 +7,13 @@ namespace qlTiecCuoi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class xoasoluongdichvu : IMigrationMetadata
+    public sealed partial class danhsachsanh : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(xoasoluongdichvu));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(danhsachsanh));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006031701506_xoasoluongdichvu"; }
+            get { return "202006061834286_danhsachsanh"; }
         }
         
         string IMigrationMetadata.Source

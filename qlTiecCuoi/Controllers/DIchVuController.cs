@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,10 +48,19 @@ namespace qlTiecCuoi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDDichVu,TenDichVu,DonGia,GhiChu")] DIchVu dIchVu)
+        public ActionResult Create([Bind(Include = "IDDichVu,TenDichVu,DonGia,HinhAnh")] DIchVu dIchVu, HttpPostedFileBase HinhAnh)
         {
             if (ModelState.IsValid)
             {
+                if (HinhAnh != null)
+                {
+                    var filename = Path.GetFileName(HinhAnh.FileName);
+                    dIchVu.HinhAnh = filename;
+                    string path = Path.Combine(Server.MapPath("~/Content/assets/images/trang-tri/"), filename);
+                    HinhAnh.SaveAs(path);
+                }
+                else
+                    dIchVu.HinhAnh = "backdrop.jpg";
                 db.dbdichvu.Add(dIchVu);
                 db.SaveChanges();
                 return RedirectToAction("Index");

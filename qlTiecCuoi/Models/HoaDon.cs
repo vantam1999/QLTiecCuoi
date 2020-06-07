@@ -14,9 +14,13 @@ namespace qlTiecCuoi.Models
         [ForeignKey("dattiec")]
         public int IDDatTiec { get; set; }
         public DatTiec dattiec { get; set; }
+        public DateTime NgayThanhToan { get; set; }
         public double TongTienBan { get; set; }
         public double TongTienDichVu { get; set; }
-        public double TongTien { get; set; }
+        public double TongTienMonAn { get; set; }
+        public double TienSanh { get; set; }
+        public double TongTienHoaDon { get; set; }
+        public double TienDatCoc { get; set; }
         public double ConLai { get; set; }
     }
 }

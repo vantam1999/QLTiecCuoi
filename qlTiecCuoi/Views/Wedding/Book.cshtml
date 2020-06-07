@@ -1,4 +1,4 @@
-﻿
+﻿@model qlTiecCuoi.Models.DatTiec
 @{
     ViewBag.Title = "Đặt tiệc cưới";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -16,11 +16,14 @@
                 <h3>QUÝ KHÁCH VUI LÒNG BẤM VÀO NÚT ĐẶT TIỆC BÊN DƯỚI!</h3>
             </div>
             <div class="book__tabs">
-                <form>
+                <form action="/Wedding/dattiec">
                     <div class="tabs">
                         <ol class="tabs__direction">
                             <li>
                                 <button type="button" class="active__direction" data-target="tab-personal">Thông Tin Cá Nhân</button>
+                            </li>
+                            <li>
+                                <button type="button" data-target="tab-sanh">Thông Tin Sảnh tiệc</button>
                             </li>
                             <li>
                                 <button type="button" data-target="tab-food">Thông Tin Thực Đơn</button>
@@ -28,6 +31,7 @@
                             <li>
                                 <button type="button" data-target="tab-service">Thông Tin Dịch Vụ</button>
                             </li>
+
                         </ol>
                         <div class="tabs__content">
                             <div class="tabs__item active__tabs" id="tab-personal">
@@ -38,12 +42,12 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-6 col-sm-12">
-                                                            <label for="tenchure">Tên chú rễ: </label>
-                                                            <input class="form-control" type="text" name="tenchure" id="tenchure" />
+                                                            <label for="TenChuRe">Tên chú rễ: </label>
+                                                            <input class="form-control" type="text" name="TenChuRe" id="TenChuRe" />
                                                         </div>
                                                         <div class="col-lg-6 col-sm-12">
-                                                            <label for="tencodau">Tên cô dâu: </label>
-                                                            <input class="form-control" type="text" name="tencodau" id="tencodau" />
+                                                            <label for="TenCoDau">Tên cô dâu: </label>
+                                                            <input class="form-control" type="text" name="TenCoDau" id="TenCoDau" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -54,16 +58,16 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-4 col-sm-12">
-                                                            <label for="sdt">Số điện thoại: </label>
-                                                            <input class="form-control" type="text" name="sdt" id="sdt" />
+                                                            <label for="SDT">Số điện thoại: </label>
+                                                            <input class="form-control" type="text" name="SDT" id="SDT" />
                                                         </div>
                                                         <div class="col-lg-4 col-sm-12">
-                                                            <label for="ngay">Ngày: </label>
-                                                            <input class="form-control" type="date" name="ngay" id="ngay" />
+                                                            <label for="Ngay">Ngày: </label>
+                                                            <input class="form-control" type="date" name="Ngay" id="Ngay" />
                                                         </div>
                                                         <div class="col-lg-4 col-sm-12">
-                                                            <label for="ca">Ca: </label>
-                                                            <select class="form-control" name="ca" id="ca">
+                                                            <label for="Ca">Ca: </label>
+                                                            <select class="form-control" name="Ca" id="Ca">
                                                                 <option selected>---- Ca ----</option>
                                                                 <option value="trua">Trưa</option>
                                                                 <option value="toi">Tối</option>
@@ -78,18 +82,24 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-6 col-sm-12">
-                                                            <label for="slban">Số lượng bàn: </label>
-                                                            <input class="form-control" type="number" name="slban" form="slban" />
+                                                            <label for="SoLuongBan">Số lượng bàn: </label>
+                                                            <input class="form-control" type="number" name="SoLuongBan" id="SoLuongBan" />
                                                         </div>
                                                         <div class="col-lg-6 col-sm-12">
-                                                            <label for="slbandutru">Số lượng bàn dự trữ: </label>
-                                                            <input class="form-control" type="number" name="slbandutru" form="slbandutru" />
+                                                            <label for="SoBanDuTru">Số lượng bàn dự trữ: </label>
+                                                            <input class="form-control" type="number" name="SoBanDuTru" id="SoBanDuTru" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="tabs__item" id="tab-sanh">
+                                <div style="padding:10px;">
+                                    <div>@{Html.RenderAction("chonsanh", "SanhTiecs");}</div>
+                                    @*<div>@{Html.RenderAction("thongtinsanh", "SanhTiecs");}</div>*@
                                 </div>
                             </div>
                             <div class="tabs__item" id="tab-food">
@@ -99,9 +109,16 @@
                                 </div>
                             </div>
                             <div class="tabs__item" id="tab-service">
-                                Service massage
+                                @{Html.RenderAction("show", "ChonDichVu");}
+                                <div style="margin-left:50px;">
+                                    <a class=" btn btn-primary" href="/Wedding/Service">Thêm</a>
+                                </div>
                             </div>
+
                         </div>
+                    </div>
+                    <div align="center" style="margin-top:20px;">
+                        <input type="submit" class="btn btn-primary" value="Đặt tiệc" />
                     </div>
                 </form>
             </div>

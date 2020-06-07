@@ -13,7 +13,7 @@ namespace qlTiecCuoi.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202006031516354_InitialCreate"; }
+            get { return "202006061544399_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

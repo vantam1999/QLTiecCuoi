@@ -7,15 +7,15 @@ using System.Web;
 
 namespace qlTiecCuoi.Models
 {
-    public class DichVu_DatTiec
+    public class OrderDichVu
     {
         [Key]
-        public int IDDichVu_DatTiec { get; set; }
+        public int IDOrderDichVu { get; set; }
         [ForeignKey("dichvu")]
         public int IDDichVu { get; set; }
         public DIchVu dichvu { get; set; }
-        [ForeignKey("dattiec")]
-        public int IDDatTiec { get; set; }
-        public DatTiec dattiec { get; set; }
+        [ForeignKey("user")]
+        public int IDUser { get; set; }
+        public User user { get; set; }
     }
 }

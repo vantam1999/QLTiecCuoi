@@ -7,13 +7,13 @@ using System.Web;
 
 namespace qlTiecCuoi.Models
 {
-    public class MonAn_DatTiec
+    public class OrderMonAn
     {
         [Key]
-        public int IDMonAn_DatTiec { get; set; }
-        [ForeignKey("dattiec")]
-        public int IDDatTiec { get; set; }
-        public DatTiec dattiec { get; set; }
+        public int IDOrderMonAn { get; set; }
+        [ForeignKey("user")]
+        public int IDUSer { get; set; }
+        public User user { get; set; }
         [ForeignKey("monan")]
         public int IDMonAn { get; set; }
         public MonAn monan { get; set; }
