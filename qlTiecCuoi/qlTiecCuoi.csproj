@@ -129,10 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
-    <Compile Include="Controllers\AdminController.cs" />
-=======
->>>>>>> 7bc1d0c923584e6fbc290cc4f40f5de1faaad08f
+
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ChonDichVuController.cs" />
     <Compile Include="Controllers\ChonMonAnController.cs" />
@@ -145,11 +142,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Migrations\202006061156579_initData.cs" />
-    <Compile Include="Migrations\202006061156579_initData.designer.cs">
-      <DependentUpon>202006061156579_initData.cs</DependentUpon>
-=======
+
     <Compile Include="Migrations\202006061544399_InitialCreate.cs" />
     <Compile Include="Migrations\202006061544399_InitialCreate.designer.cs">
       <DependentUpon>202006061544399_InitialCreate.cs</DependentUpon>
@@ -161,7 +154,7 @@
     <Compile Include="Migrations\202006061834286_danhsachsanh.cs" />
     <Compile Include="Migrations\202006061834286_danhsachsanh.designer.cs">
       <DependentUpon>202006061834286_danhsachsanh.cs</DependentUpon>
->>>>>>> 7bc1d0c923584e6fbc290cc4f40f5de1faaad08f
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatTiec.cs" />
@@ -470,13 +463,7 @@
     <Content Include="Views\DatTiecs\Edit.cshtml" />
     <Content Include="Views\DatTiecs\Index.cshtml" />
     <Content Include="Views\ChonMonAn\show.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-=======
+
     <Content Include="Views\ChonDichVu\show.cshtml" />
     <Content Include="Views\SanhTiecs\Create.cshtml" />
     <Content Include="Views\SanhTiecs\Delete.cshtml" />
@@ -490,7 +477,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\DatTiec\" />
->>>>>>> 7bc1d0c923584e6fbc290cc4f40f5de1faaad08f
+
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
@@ -525,10 +512,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\202006061156579_initData.resx">
-      <DependentUpon>202006061156579_initData.cs</DependentUpon>
-=======
+
     <EmbeddedResource Include="Migrations\202006061544399_InitialCreate.resx">
       <DependentUpon>202006061544399_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,7 +521,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006061834286_danhsachsanh.resx">
       <DependentUpon>202006061834286_danhsachsanh.cs</DependentUpon>
->>>>>>> 7bc1d0c923584e6fbc290cc4f40f5de1faaad08f
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
