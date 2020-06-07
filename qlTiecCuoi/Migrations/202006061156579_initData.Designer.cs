@@ -7,13 +7,13 @@ namespace qlTiecCuoi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class hinhanh_monan : IMigrationMetadata
+    public sealed partial class initData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(hinhanh_monan));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initData));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006031550521_hinhanh_monan"; }
+            get { return "202006061156579_initData"; }
         }
         
         string IMigrationMetadata.Source

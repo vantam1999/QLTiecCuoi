@@ -129,8 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ChonMonAnController.cs" />
     <Compile Include="Controllers\DatTiecsController.cs" />
@@ -142,25 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006031516354_InitialCreate.cs" />
-    <Compile Include="Migrations\202006031516354_InitialCreate.designer.cs">
-      <DependentUpon>202006031516354_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006031550521_hinhanh_monan.cs" />
-    <Compile Include="Migrations\202006031550521_hinhanh_monan.designer.cs">
-      <DependentUpon>202006031550521_hinhanh_monan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006031701506_xoasoluongdichvu.cs" />
-    <Compile Include="Migrations\202006031701506_xoasoluongdichvu.designer.cs">
-      <DependentUpon>202006031701506_xoasoluongdichvu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006060709082_fixmodel.cs" />
-    <Compile Include="Migrations\202006060709082_fixmodel.designer.cs">
-      <DependentUpon>202006060709082_fixmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006060715302_dbset.cs" />
-    <Compile Include="Migrations\202006060715302_dbset.designer.cs">
-      <DependentUpon>202006060715302_dbset.cs</DependentUpon>
+    <Compile Include="Migrations\202006061156579_initData.cs" />
+    <Compile Include="Migrations\202006061156579_initData.designer.cs">
+      <DependentUpon>202006061156579_initData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatTiec.cs" />
@@ -292,6 +275,10 @@
     <Content Include="Content\scripts\social.js" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style.min.css" />
+    <Content Include="Content\style\header.css" />
+    <Content Include="Content\style\layout.css" />
+    <Content Include="Content\style\main.css" />
+    <Content Include="Content\style\sidebar.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -316,10 +303,6 @@
     <Content Include="Content\scss\_module.scss" />
     <Content Include="Content\scss\_var.scss" />
     <Content Include="Content\style.scss" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -469,10 +452,11 @@
     <Content Include="Views\DatTiecs\Edit.cshtml" />
     <Content Include="Views\DatTiecs\Index.cshtml" />
     <Content Include="Views\ChonMonAn\show.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
@@ -507,20 +491,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006031516354_InitialCreate.resx">
-      <DependentUpon>202006031516354_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006031550521_hinhanh_monan.resx">
-      <DependentUpon>202006031550521_hinhanh_monan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006031701506_xoasoluongdichvu.resx">
-      <DependentUpon>202006031701506_xoasoluongdichvu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006060709082_fixmodel.resx">
-      <DependentUpon>202006060709082_fixmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006060715302_dbset.resx">
-      <DependentUpon>202006060715302_dbset.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006061156579_initData.resx">
+      <DependentUpon>202006061156579_initData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

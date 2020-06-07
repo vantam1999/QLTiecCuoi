@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "qlTiecCuoi.DAL.Context";
         }
 
         protected override void Seed(qlTiecCuoi.DAL.Context context)

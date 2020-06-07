@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<qlTiecCuoi.Models.MonAn>
 
 @{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
 }
 
@@ -11,6 +12,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDMonAn)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.TenMon)
         </th>
@@ -29,10 +33,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.IDMonAn)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.TenMon)
         </td>
         <td>
-            <img src="~/Content/Myfolder/images/food/@Url.Content(item.HinhAnh)" style="width:150px; height:150px;" />
+            <img src="~/Content/Myfolder/images/food/@Url.Content(item.HinhAnh)" style="width:100px; height:100px;" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Gia)
