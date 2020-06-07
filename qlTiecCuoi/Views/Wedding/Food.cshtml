@@ -48,7 +48,6 @@
                             <div id="name">@Html.DisplayFor(Model => item.TenMon)</div>
                             <img src="~/Content/Myfolder/images/food/@Url.Content(item.HinhAnh)" style="margin: 10px 0; width: 100%; object-fit: cover;" />
                             <b>Price: <i style="color:red;">@Html.DisplayFor(Model => item.Gia)</i></b>
-                            @*<a href="/ShoppingCart/AddtoCart/@item.IDProduct"><img src="~/Content/images/giohang.png" style="width:25px; height:25px; margin:5px;" /></a>*@
                         <div>
                             <a href="/ChonMonAn/AddtoList/@item.IDMonAn"><input type="submit" class="btn btn-primary" value="Thêm" style="width:120px; height:40px; margin:5px auto;" /></a>
                         </div>

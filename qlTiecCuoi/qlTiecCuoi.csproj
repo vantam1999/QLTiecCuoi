@@ -129,7 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-
+    <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\ChonDichVuController.cs" />
     <Compile Include="Controllers\ChonMonAnController.cs" />
@@ -142,19 +142,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-
-    <Compile Include="Migrations\202006061544399_InitialCreate.cs" />
-    <Compile Include="Migrations\202006061544399_InitialCreate.designer.cs">
-      <DependentUpon>202006061544399_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006061549021_ordermonan_orderdichvu.cs" />
-    <Compile Include="Migrations\202006061549021_ordermonan_orderdichvu.designer.cs">
-      <DependentUpon>202006061549021_ordermonan_orderdichvu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006061834286_danhsachsanh.cs" />
-    <Compile Include="Migrations\202006061834286_danhsachsanh.designer.cs">
-      <DependentUpon>202006061834286_danhsachsanh.cs</DependentUpon>
-
+    <Compile Include="Migrations\202006071119478_initData.cs" />
+    <Compile Include="Migrations\202006071119478_initData.designer.cs">
+      <DependentUpon>202006071119478_initData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatTiec.cs" />
@@ -463,7 +453,6 @@
     <Content Include="Views\DatTiecs\Edit.cshtml" />
     <Content Include="Views\DatTiecs\Index.cshtml" />
     <Content Include="Views\ChonMonAn\show.cshtml" />
-
     <Content Include="Views\ChonDichVu\show.cshtml" />
     <Content Include="Views\SanhTiecs\Create.cshtml" />
     <Content Include="Views\SanhTiecs\Delete.cshtml" />
@@ -473,11 +462,12 @@
     <Content Include="Views\SanhTiecs\chonsanh.cshtml" />
     <Content Include="Views\SanhTiecs\thongtinsanh.cshtml" />
     <Content Include="Views\Wedding\Thongbao.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\DatTiec\" />
-
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
@@ -512,16 +502,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-
-    <EmbeddedResource Include="Migrations\202006061544399_InitialCreate.resx">
-      <DependentUpon>202006061544399_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006061549021_ordermonan_orderdichvu.resx">
-      <DependentUpon>202006061549021_ordermonan_orderdichvu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006061834286_danhsachsanh.resx">
-      <DependentUpon>202006061834286_danhsachsanh.cs</DependentUpon>
-
+    <EmbeddedResource Include="Migrations\202006071119478_initData.resx">
+      <DependentUpon>202006071119478_initData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<qlTiecCuoi.Models.DIchVu>
 
 @{
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Index</h2>
@@ -25,22 +25,23 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDichVu)
-        </td>
-        <td>
-            <img src="~/Content/assets/images/trang-tri/@Url.Content(item.HinhAnh)" style="width:150px; height:150px;" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DonGia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDDichVu }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDDichVu })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDichVu)
+            </td>
+            <td>
+                <img src="~/Content/assets/images/trang-tri/@Url.Content(item.HinhAnh)" style="width:150px; height:150px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonGia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDDichVu }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDDichVu })
+            </td>
+        </tr>
+    }
 
 </table>
