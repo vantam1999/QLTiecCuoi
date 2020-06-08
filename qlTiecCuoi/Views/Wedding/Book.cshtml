@@ -22,9 +22,9 @@
                             <li>
                                 <button type="button" class="active__direction" data-target="tab-personal">Thông Tin Cá Nhân</button>
                             </li>
-                            <li>
+                            @*<li>
                                 <button type="button" data-target="tab-sanh">Thông Tin Sảnh tiệc</button>
-                            </li>
+                            </li>*@
                             <li>
                                 <button type="button" data-target="tab-food">Thông Tin Thực Đơn</button>
                             </li>
@@ -89,6 +89,11 @@
                                                             <label for="SoBanDuTru">Số lượng bàn dự trữ: </label>
                                                             <input class="form-control" type="number" name="SoBanDuTru" id="SoBanDuTru" />
                                                         </div>
+                                                        <div class="col-lg-6 col-sm-12">
+                                                            <label for="sanh">Sảnh: </label>
+                                                            <div>@{Html.RenderAction("chonsanh", "SanhTiec");}</div>
+                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,12 +101,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs__item" id="tab-sanh">
-                                <div style="padding:10px;">
-                                    <div>@{Html.RenderAction("chonsanh", "SanhTiecs");}</div>
-                                    @*<div>@{Html.RenderAction("thongtinsanh", "SanhTiecs");}</div>*@
-                                </div>
-                            </div>
+                            @*<div class="tabs__item" id="tab-sanh">
+                                
+                            </div>*@
                             <div class="tabs__item" id="tab-food">
                                 @{Html.RenderAction("show", "ChonMonAn");}
                                 <div style="margin-left:50px;">

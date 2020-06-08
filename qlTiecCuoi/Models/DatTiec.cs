@@ -24,11 +24,6 @@ namespace qlTiecCuoi.Models
         public string Ca { get; set; }
         public int SoLuongBan { get; set; }
         public int SoBanDuTru { get; set; }
-        //[ForeignKey("OrderMonAn")]
-        //public int IDOrderMonAn { get; set; }
-        //public OrderMonAn OrderMonAn { get; set; }
-        //[ForeignKey("OrderDichVu")]
-        //public int IDOrderDichVu { get; set; }
-        //public OrderDichVu OrderDichVu { get; set; }
+        public bool TinhTrang { get; set; }
     }
 }

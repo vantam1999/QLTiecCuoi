@@ -1,0 +1,115 @@
+﻿@model IEnumerable<qlTiecCuoi.Models.DatTiec>
+
+@{
+    ViewBag.Title = "danhsachdattiec";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách đơn đặt tiệc</h2>
+
+<div style="text-align:center; margin-bottom:10px;">
+    @using (Html.BeginForm("danhsachdattiec", "Wedding"))
+    {
+        <span style="margin-right:10px;">@Html.RadioButton("tinhtrang", "false", true)<text>Chưa xác nhận đơn </text></span>
+        <span style="margin-right:10px;">@Html.RadioButton("tinhtrang", "true")<text>Đã xác nhận đơn </text></span>
+        <input type="submit" value="Lọc" class="btn btn-primary" />
+    }
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDDatTiec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDSanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDUser)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TenCoDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenChuRe)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoBanDuTru)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDDatTiec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDSanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDUser)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TenCoDau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenChuRe)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoBanDuTru)
+        </td>
+        @if (ViewBag.tinhtrang == 0)
+        {
+            <td>
+                <div style="margin-bottom:5px;">
+                    <a href="@Url.Action("ThanhToan50","HoaDon", new { id = item.IDDatTiec })">
+                        <input type="submit" class="btn btn-primary" value="Xác nhận" />
+                    </a>
+                    <text>Đã thanh toán 50%</text>
+                </div>
+                <div>
+                    <a href="@Url.Action("ThanhToan100","HoaDon", new { id = item.IDDatTiec })">
+                        <input type="submit" class="btn btn-primary" value="Xác nhận" />
+                    </a>
+                    <text>Đã thanh toán 100%</text>
+                </div>
+            </td>
+        }
+        else
+        {
+            <td>
+                <div>
+                    <a href="@Url.Action("XemChiTietHoaDon","HoaDon", new { id = item.IDDatTiec })">
+                        <input type="submit" value="Xem chi tiết" class="btn btn-primary" />
+                    </a>
+                </div>
+            </td>
+        }
+    </tr>
+}
+
+</table>

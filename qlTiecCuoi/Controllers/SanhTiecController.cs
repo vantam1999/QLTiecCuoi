@@ -12,17 +12,17 @@ using qlTiecCuoi.Models;
 
 namespace qlTiecCuoi.Controllers
 {
-    public class SanhTiecsController : Controller
+    public class SanhTiecController : Controller
     {
         private Context db = new Context();
 
-        // GET: SanhTiecs
+        // GET: SanhTiec
         public ActionResult Index()
         {
             return View(db.dbsanhtiec.ToList());
         }
 
-        // GET: SanhTiecs/Details/5
+        // GET: SanhTiec/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,13 +37,13 @@ namespace qlTiecCuoi.Controllers
             return View(sanhTiec);
         }
 
-        // GET: SanhTiecs/Create
+        // GET: SanhTiec/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: SanhTiecs/Create
+        // POST: SanhTiec/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -69,7 +69,7 @@ namespace qlTiecCuoi.Controllers
             return View(sanhTiec);
         }
 
-        // GET: SanhTiecs/Edit/5
+        // GET: SanhTiec/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,7 +84,7 @@ namespace qlTiecCuoi.Controllers
             return View(sanhTiec);
         }
 
-        // POST: SanhTiecs/Edit/5
+        // POST: SanhTiec/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -100,7 +100,7 @@ namespace qlTiecCuoi.Controllers
             return View(sanhTiec);
         }
 
-        // GET: SanhTiecs/Delete/5
+        // GET: SanhTiec/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -115,7 +115,7 @@ namespace qlTiecCuoi.Controllers
             return View(sanhTiec);
         }
 
-        // POST: SanhTiecs/Delete/5
+        // POST: SanhTiec/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -125,23 +125,7 @@ namespace qlTiecCuoi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult chonsanh()
-        {
-            SanhTiec s = new SanhTiec();
-            s.danhsachsanh = db.dbsanhtiec.ToList();
-            return PartialView(s);
-        }
-        public ActionResult thongtinsanh(int id)
-        {
-            var sanh = db.dbsanhtiec.Where(m => m.IDSanh == id).FirstOrDefault();
-            if (sanh!= null)
-            {
-                ViewBag.sanh = sanh;
-                return PartialView(sanh);
-            }
-            else
-                return PartialView();
-        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -149,6 +133,12 @@ namespace qlTiecCuoi.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult chonsanh()
+        {
+            SanhTiec s = new SanhTiec();
+            s.danhsachsanh = db.dbsanhtiec.ToList();
+            return PartialView(s);
         }
     }
 }

@@ -1,0 +1,40 @@
+﻿@model qlTiecCuoi.Models.HoaDon
+
+<table class="table" style="text-align:left;">
+    <tr>
+        <th>Ngày thanh toán</th>
+        <td>@Html.DisplayFor(Model => Model.NgayThanhToan)</td>
+    </tr>
+    <tr>
+        <th>Tiền sảnh</th>
+        <td>@Html.DisplayFor(Model => Model.TienSanh)</td>
+    </tr>
+    <tr>
+        <th>Số bàn</th>
+        <td>@ViewBag.soban</td>
+    </tr>
+    <tr>
+        <th>Tiền bàn</th>
+        <td>@Html.DisplayFor(Model => Model.TongTienBan)</td>
+    </tr>
+    <tr>
+        <th>Tiền món ăn</th>
+        <td>@Html.DisplayFor(Model => Model.TongTienMonAn)</td>
+    </tr>
+    <tr>
+        <th>Tiền dịch vụ</th>
+        <td>@Html.DisplayFor(Model => Model.TongTienDichVu)</td>
+    </tr>
+    <tr>
+        <th>Tổng tiền hóa đơn</th>
+        <td>@Html.DisplayFor(Model => Model.TongTienHoaDon)</td>
+    </tr>
+    <tr>
+        <th>Đã thanh toán</th>
+        <td>@Html.DisplayFor(Model => Model.TienDatCoc)</td>
+    </tr>
+    <tr>
+        <th>Còn lại</th>
+        <td>@Html.DisplayFor(Model => Model.ConLai)</td>
+    </tr>
+</table>

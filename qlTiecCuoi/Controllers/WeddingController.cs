@@ -38,16 +38,29 @@ namespace qlTiecCuoi.Controllers
         {
             return View();
         }
+        public ActionResult danhsachdattiec(string tinhtrang)
+        {
+            if (tinhtrang == "true")
+            {
+                ViewBag.tinhtrang = 1;
+                return View(db.dbdattiec.Where(m => m.TinhTrang == true).ToList());
+            }
+            ViewBag.tinhtrang = 0;
+            return View(db.dbdattiec.Where(m => m.TinhTrang == false).ToList());
+        }
         public ActionResult dattiec(DatTiec d)
         {
             if (ModelState.IsValid)
             {
+                d.TinhTrang = false;
+                d.IDUser = int.Parse(Session["iduser"].ToString());
+                db.dbdattiec.Add(d);
                 _MonAn monan = Session["monan"] as _MonAn;
                 foreach (var item in monan.monans)
                 {
                     OrderMonAn m = new OrderMonAn();
                     m.IDMonAn = item.IDMonAn;
-                    m.IDUSer = int.Parse(Session["iduser"].ToString());
+                    m.IDDatTiec = d.IDDatTiec;
                     db.OrderMonAn.Add(m);
                 }
                 _DichVu dichvu = Session["dichvu"] as _DichVu;
@@ -55,11 +68,9 @@ namespace qlTiecCuoi.Controllers
                 {
                     OrderDichVu _d = new OrderDichVu();
                     _d.IDDichVu = item.IDDichVu;
-                    _d.IDUser = int.Parse(Session["iduser"].ToString());
+                    _d.IDDatTiec = d.IDDatTiec;
                     db.OrderDichVu.Add(_d);
                 }
-                d.IDUser = int.Parse(Session["iduser"].ToString());
-                db.dbdattiec.Add(d);
                 db.SaveChanges();
             }
             return RedirectToAction("Thongbao");
