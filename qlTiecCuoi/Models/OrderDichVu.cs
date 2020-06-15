@@ -14,8 +14,11 @@ namespace qlTiecCuoi.Models
         [ForeignKey("dichvu")]
         public int IDDichVu { get; set; }
         public DIchVu dichvu { get; set; }
-        [ForeignKey("user")]
-        public int IDUser { get; set; }
-        public User user { get; set; }
+        //[ForeignKey("user")]
+        //public int IDUser { get; set; }
+        //public User user { get; set; }
+        [ForeignKey("DatTiec")]
+        public int IDDatTiec { get; set; }
+        public DatTiec DatTiec { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace qlTiecCuoi.DAL
 {
     public class Context:DbContext
     {
-        public Context():base("name = QLTiecCuoi1")
+        public Context():base("name = QLTiecCuoi4")
         {
 
         }

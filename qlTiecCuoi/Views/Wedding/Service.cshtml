@@ -46,7 +46,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div id="name">@Html.DisplayFor(Model => item.TenDichVu)</div>
-                        <img src="~/Content/assets/images/trang-tri/@Url.Content(item.HinhAnh)" style=" margin:10px;" />
+                        <img src="~/Content/assets/images/trang-tri/@Url.Content(item.HinhAnh)" style=" margin:10px; width:300px; height:400px;" />
                         <b>Price: <i style="color:red;">@Html.DisplayFor(Model => item.DonGia)</i></b>
                         <a href="/ChonDichVu/AddtoList/@item.IDDichVu"><input type="submit" class="btn btn-primary" value="Thêm" style="width:120px; height:40px; margin:5px auto;" /></a>
                     </div>

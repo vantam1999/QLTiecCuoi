@@ -1,0 +1,98 @@
+﻿@model qlTiecCuoi.Models.DatTiec
+
+@{
+    ViewBag.Title = "XemChiTietHoaDon";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết đơn</h2>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDSanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenCoDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenChuRe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoBanDuTru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(Model => Model.IDSanh)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.IDUser)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.TenCoDau)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.TenChuRe)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.Ngay)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.Ca)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.SoLuongBan)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.SoBanDuTru)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.TinhTrang)
+        </td>
+    </tr>
+</table>
+<hr />
+<br />
+<h2>Thực đơn</h2>
+<br />
+<div>@{Html.RenderAction("ChiTietMonAn", "HoaDon");}</div>
+<hr />
+<br />
+<h2>Dịch vụ</h2>
+<br />
+<div>@{Html.RenderAction("ChiTietDichVu", "HoaDon");}</div>
+<hr />
+<br />
+<h2>Hóa đơn</h2>
+<br />
+<div>@{Html.RenderAction("ChiTietHoaDon", "HoaDon");}</div>
+<br />
+<a href="/Wedding/danhsachdattiec">
+    <input type="submit" value="Quay lại" class="btn btn-primary" />
+</a>
+<br />
+<br />

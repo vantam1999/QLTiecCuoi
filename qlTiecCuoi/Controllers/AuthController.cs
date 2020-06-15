@@ -25,7 +25,7 @@ namespace qlTiecCuoi.Controllers
             {
                 if (check.Email == "admin@gmail.com")
                 {
-                    return RedirectToAction("");
+                    return RedirectToAction("Index","Admins");
                 }
                 else
                 {

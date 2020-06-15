@@ -11,11 +11,14 @@ namespace qlTiecCuoi.Models
     {
         [Key]
         public int IDOrderMonAn { get; set; }
-        [ForeignKey("user")]
-        public int IDUSer { get; set; }
-        public User user { get; set; }
+        //[ForeignKey("user")]
+        //public int IDUSer { get; set; }
+        //public User user { get; set; }
         [ForeignKey("monan")]
         public int IDMonAn { get; set; }
         public MonAn monan { get; set; }
+        [ForeignKey("DatTiec")]
+        public int IDDatTiec { get; set; }
+        public DatTiec DatTiec { get; set; }
     }
 }

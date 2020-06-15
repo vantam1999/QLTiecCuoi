@@ -134,9 +134,10 @@
     <Compile Include="Controllers\ChonDichVuController.cs" />
     <Compile Include="Controllers\ChonMonAnController.cs" />
     <Compile Include="Controllers\DIchVuController.cs" />
+    <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MonAnController.cs" />
-    <Compile Include="Controllers\SanhTiecsController.cs" />
+    <Compile Include="Controllers\SanhTiecController.cs" />
     <Compile Include="Controllers\WeddingController.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="Global.asax.cs">
@@ -393,14 +394,18 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -442,27 +447,25 @@
     <Content Include="Views\DIchVu\Delete.cshtml" />
     <Content Include="Views\DIchVu\Edit.cshtml" />
     <Content Include="Views\DIchVu\Index.cshtml" />
-    <Content Include="Views\DatTiecs\Create.cshtml" />
-    <Content Include="Views\DatTiecs\Delete.cshtml" />
-    <Content Include="Views\DatTiecs\Details.cshtml" />
-    <Content Include="Views\DatTiecs\Edit.cshtml" />
-    <Content Include="Views\DatTiecs\Index.cshtml" />
     <Content Include="Views\ChonMonAn\show.cshtml" />
     <Content Include="Views\ChonDichVu\show.cshtml" />
-    <Content Include="Views\SanhTiecs\Create.cshtml" />
-    <Content Include="Views\SanhTiecs\Delete.cshtml" />
-    <Content Include="Views\SanhTiecs\Details.cshtml" />
-    <Content Include="Views\SanhTiecs\Edit.cshtml" />
-    <Content Include="Views\SanhTiecs\Index.cshtml" />
-    <Content Include="Views\SanhTiecs\chonsanh.cshtml" />
-    <Content Include="Views\SanhTiecs\thongtinsanh.cshtml" />
     <Content Include="Views\Wedding\Thongbao.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admins\Index.cshtml" />
+    <Content Include="Views\SanhTiec\Create.cshtml" />
+    <Content Include="Views\SanhTiec\Delete.cshtml" />
+    <Content Include="Views\SanhTiec\Details.cshtml" />
+    <Content Include="Views\SanhTiec\Edit.cshtml" />
+    <Content Include="Views\SanhTiec\Index.cshtml" />
+    <Content Include="Views\SanhTiec\chonsanh.cshtml" />
+    <Content Include="Views\Wedding\danhsachdattiec.cshtml" />
+    <Content Include="Views\HoaDon\XemChiTietHoaDon.cshtml" />
+    <Content Include="Views\HoaDon\ChiTietMonAn.cshtml" />
+    <Content Include="Views\HoaDon\ChiTietDichVu.cshtml" />
+    <Content Include="Views\HoaDon\ChiTietHoaDon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\DatTiec\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\scss\module\_social.scss" />
